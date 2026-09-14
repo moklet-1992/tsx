@@ -53,6 +53,24 @@ npm run build
 
 Every case in the same level has the **same points**. Later cases are only harder to finish, not worth more. See [Exam Scoring](#exam-scoring).
 
+## Bahasa Indonesia
+
+Each case also has an Indonesian problem statement. The data, required function/class names, and **expected output stay in English** so marking is the same.
+
+| English | Bahasa Indonesia |
+|---------|------------------|
+| `src/easy/case-01.ts` | `src/easy/id/case-01.ts` |
+| `src/medium/case-01.ts` | `src/medium/id/case-01.ts` |
+| `src/high/case-01.ts` | `src/high/id/case-01.ts` |
+
+```bash
+npm run dev src/easy/id/case-01.ts
+npm run dev src/medium/id/case-01.ts
+npm run dev src/high/id/case-01.ts
+```
+
+Kerjakan **salah satu** versi per kasus (Inggris atau Indonesia), bukan keduanya.
+
 ## Easy Level
 
 Six case studies. Each one combines **data types**, **operators**, and **conditions**. They are still easy: no loops, functions, arrays, or OOP. The rules are heavier than daily drills — more than one decision, and calculations that feed the next check.
@@ -71,10 +89,11 @@ Mark each Easy case out of **100**: data types 30, operators/formulas 30, condit
 ```bash
 npm run dev src/easy/example.ts
 npm run dev src/easy/case-01.ts
+npm run dev src/easy/id/case-01.ts
 npm run check
 ```
 
-Read `src/easy/example.ts` first if you need a hint (types, operators, `if` / `&&` / `||`). Then write your solution below the comment in each case file, and compare the terminal output with the **Expected output**.
+Read `src/easy/example.ts` first if you need a hint (types, operators, `if` / `&&` / `||`). Indonesian case text: `src/easy/id/`. Then write your solution below the comment, and compare the terminal output with the **Expected output**.
 
 ## Medium Level
 
@@ -94,9 +113,10 @@ Mark each Medium case out of **140**: functions 50, looping 40, conditions 35, e
 ```bash
 npm run dev src/medium/example.ts
 npm run dev src/medium/case-01.ts
+npm run dev src/medium/id/case-01.ts
 ```
 
-Read `src/medium/example.ts` first if you need a hint (named functions, `for` / `for...of`, `if` inside the loop).
+Read `src/medium/example.ts` first if you need a hint (named functions, `for` / `for...of`, `if` inside the loop). Indonesian case text: `src/medium/id/`.
 
 ## High Level
 
@@ -130,9 +150,10 @@ High level cap: **400**.
 npm run dev src/high/example-oop.ts
 npm run dev src/high/example-array.ts
 npm run dev src/high/case-01.ts
+npm run dev src/high/id/case-01.ts
 ```
 
-Read `src/high/example-oop.ts` before cases 01–03, and `src/high/example-array.ts` before cases 04–06. The examples are hints, not answers.
+Read `src/high/example-oop.ts` before cases 01–03, and `src/high/example-array.ts` before cases 04–06. Indonesian case text: `src/high/id/`. The examples are hints, not answers.
 
 ## Exam Scoring
 
@@ -236,14 +257,17 @@ typescript-assessments/
 ├── src/
 │   ├── easy/
 │   │   ├── example.ts
-│   │   └── case-01.ts … case-06.ts
+│   │   ├── case-01.ts … case-06.ts
+│   │   └── id/                  # Bahasa Indonesia
 │   ├── medium/
 │   │   ├── example.ts
-│   │   └── case-01.ts … case-06.ts
+│   │   ├── case-01.ts … case-06.ts
+│   │   └── id/
 │   ├── high/
 │   │   ├── example-oop.ts
 │   │   ├── example-array.ts
-│   │   └── case-01.ts … case-06.ts
+│   │   ├── case-01.ts … case-06.ts
+│   │   └── id/
 │   └── index.ts
 ├── package.json
 ├── tsconfig.json

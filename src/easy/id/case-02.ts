@@ -1,48 +1,52 @@
 /**
- * Easy Case 02 — Penarikan Tunai pada ATM
+ * Easy Case 02 — Kartu Tamu Gerbang Kampus
  * Points: 100 (Easy)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * ATM harus memeriksa transaksi dalam urutan ini dan berhenti pada
- * aturan pertama yang gagal:
- *  1. Nominal penarikan harus lebih dari 0
- *  2. Kumulatif penarikan hari ini pada transaksi sebelumnya + penarikan ini tidak boleh melebihi
- *     batas harian
- *  3. Penarikan + biaya admin tidak boleh melebihi saldo rekening
+ * Gerbang kampus harus memeriksa pengunjung dalam urutan ini dan berhenti
+ * pada aturan pertama yang gagal:
+ *  1. Jam kunjungan harus lebih dari 0
+ *  2. Jam yang sudah dipakai hari ini + kunjungan ini tidak boleh melebihi
+ *     batas jam harian
+ *  3. Biaya kunjungan + biaya kendaraan tidak boleh melebihi kredit prabayar
  *
- * Biaya admin:
- *  - ATM bank lain → Rp7.500
- *  - ATM bank sendiri → Rp0
+ * Biaya kendaraan:
+ *  - Bawa mobil → Rp5.000
+ *  - Tidak bawa mobil → Rp0
  *
- * Jika transaksi diterima:
- *  - Saldo baru = saldo saat ini - penarikan - biaya admin
+ * Biaya kunjungan = jam kunjungan × tarif per jam
+ *
+ * Jika kunjungan diterima:
+ *  - Sisa kredit = kredit prabayar - biaya kunjungan - biaya kendaraan
  *  - Status = "Success"
  *
- * Jika transaksi ditolak:
- *  - Saldo baru tetap sama dengan saldo saat ini
- *  - Status salah satu dari: "Invalid amount", "Daily limit exceeded",
- *    atau "Insufficient balance"
+ * Jika kunjungan ditolak:
+ *  - Sisa kredit tetap sama dengan kredit prabayar
+ *  - Status salah satu dari: "Invalid hours", "Daily hours exceeded",
+ *    atau "Insufficient credit"
  *
- * Data rekening:
- * | Informasi                 | Nilai        |
- * | ------------------------- | ------------ |
- * | Pemilik Rekening          | Bahlil Ulala |
- * | Saldo Saat Ini            | 1250000      |
- * | Nominal Penarikan         | 500000       |
- * | Sudah Ditarik Hari Ini    | 300000       |
- * | Batas Harian              | 1000000      |
- * | ATM Bank Lain             | Ya           |
+ * Data pengunjung:
+ * | Informasi            | Nilai        |
+ * | -------------------- | ------------ |
+ * | Nama Pengunjung      | Doni Pratama |
+ * | Kredit Prabayar      | 80000        |
+ * | Jam Kunjungan        | 4            |
+ * | Jam Terpakai Hari Ini| 3            |
+ * | Batas Jam Harian     | 8            |
+ * | Tarif per Jam        | 10000        |
+ * | Bawa Mobil           | Ya           |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
- * 2. Tentukan biaya admin dengan if...else.
- * 3. Validasi transaksi sesuai urutan memakai if...else if...else.
- * 4. Tampilkan pemilik rekening, biaya admin, saldo baru, dan status.
+ * 2. Tentukan biaya kendaraan dengan if...else.
+ * 3. Validasi kunjungan sesuai urutan memakai if...else if...else.
+ * 4. Tampilkan nama pengunjung, biaya kendaraan, sisa kredit, dan status.
  *
  * Expected output:
- *  Account holder: Bahlil Ulala
- *  Admin fee: 7500
- *  New balance: 742500
+ *  Visitor: Doni Pratama
+ *  Vehicle fee: 5000
+ *  Remaining credit: 35000
  *  Status: Success
  */
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

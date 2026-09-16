@@ -1,45 +1,45 @@
 /**
- * High Case 05 — Parcel Dispatch Report (Array methods)
+ * High Case 05 — Lost Baggage Report (Array methods)
  * Points: 160 (High — Array methods)
  *
  * This case is about array methods only. Do not create a class.
- * Work directly on the parcel list with map, filter, reduce, some, and every.
+ * Work directly on the claim list with map, filter, reduce, some, and every.
  *
  * Fee rules:
- *  - Base fee = 8000
- *  - Weight fee = weight × 1500
- *  - Zone surcharge: city 0, outskirts 5000, remote 12000
- *  - Priority extra = 7000 when isPriority is true
+ *  - Base fee = 10000
+ *  - Weight fee = kg × 2000
+ *  - Zone surcharge: domestic 0, international 8000, remote 15000
+ *  - Priority extra = 9000 when isPriority is true
  *
  * Required array methods:
- *  - map    → add a fee field to every parcel
- *  - filter → pending parcels (not delivered)
+ *  - map    → add a fee field to every claim
+ *  - filter → pending claims (not settled)
  *  - filter → pending and priority
- *  - reduce → total fee of pending parcels
- *  - some   → a pending parcel is remote
- *  - every  → every city parcel is delivered
+ *  - reduce → total fee of pending claims
+ *  - some   → a pending claim is remote
+ *  - every  → every domestic claim is settled
  *
  * Tasks:
- * 1. Write functions getZoneSurcharge(zone) and getFee(parcel).
+ * 1. Write functions getZoneSurcharge(zone) and getFee(claim).
  * 2. Build the report with the array methods. Do not use a for loop.
  * 3. Display pending codes, priority pending codes, total pending fee,
- *    remote pending, and all city delivered.
+ *    remote pending, and all domestic settled.
  *
  * Expected output:
- *  Pending: P1, P2, P4, P6
- *  Priority pending: P2, P4
- *  Total pending fee: 96500
+ *  Pending: B1, B2, B4, B6
+ *  Priority pending: B2, B4
+ *  Total pending fee: 203000
  *  Remote pending: true
- *  All city delivered: false
+ *  All domestic settled: false
  */
 
-const parcels = [
-  { tracking: "P1", weight: 2, zone: "city", isPriority: false, isDelivered: false },
-  { tracking: "P2", weight: 5, zone: "outskirts", isPriority: true, isDelivered: false },
-  { tracking: "P3", weight: 3, zone: "city", isPriority: false, isDelivered: true },
-  { tracking: "P4", weight: 8, zone: "remote", isPriority: true, isDelivered: false },
-  { tracking: "P5", weight: 1, zone: "city", isPriority: false, isDelivered: true },
-  { tracking: "P6", weight: 4, zone: "outskirts", isPriority: false, isDelivered: false },
+const claims = [
+  { tracking: "B1", kg: 8, zone: "domestic", isPriority: false, isSettled: false },
+  { tracking: "B2", kg: 15, zone: "international", isPriority: true, isSettled: false },
+  { tracking: "B3", kg: 10, zone: "domestic", isPriority: false, isSettled: true },
+  { tracking: "B4", kg: 22, zone: "remote", isPriority: true, isSettled: false },
+  { tracking: "B5", kg: 6, zone: "domestic", isPriority: false, isSettled: true },
+  { tracking: "B6", kg: 12, zone: "international", isPriority: false, isSettled: false },
 ];
 
 // Write your solution below.

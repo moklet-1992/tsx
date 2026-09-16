@@ -1,45 +1,46 @@
 /**
- * Easy Case 01 — Kelayakan Donor Darah
+ * Easy Case 01 — Skrining Kebugaran Diving
  * Points: 100 (Easy)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * PMI Kota Malang menerima donor hanya jika SEMUA aturan berikut terpenuhi:
- *  - Usia 17 sampai 60 (inklusif)
- *  - Berat badan minimal 50 kg
- *  - Hemoglobin minimal 12.5
- *  - Terakhir donor minimal 84 hari yang lalu
- *  - Pendonor merasa sehat hari ini
+ * Toko diving menerima penyelam hanya jika SEMUA aturan berikut terpenuhi:
+ *  - Usia 16 sampai 55 (inklusif)
+ *  - Sertifikasi sudah berusia minimal 30 hari
+ *  - Detak jantung istirahat maksimal 90
+ *  - Hari sejak diving terakhir minimal 1
+ *  - Penyelam merasa fit hari ini
  *
- * Jika layak, pilih jenis donor:
- *  - Hemoglobin 14.0 atau lebih → "Double Red Cell"
- *  - Selain itu → "Whole Blood"
+ * Jika layak, pilih jenis tabung:
+ *  - Detak jantung 70 atau kurang → "Nitrox"
+ *  - Selain itu → "Standard Air"
  *
  * Jika tidak layak:
- *  - Jenis donor adalah "None"
+ *  - Jenis tabung adalah "None"
  *
- * Data pendonor:
- * | Informasi                 | Nilai        |
- * | ------------------------- | ------------ |
- * | Nama Pendonor             | Joko Widodo  |
- * | Usia                      | 22           |
- * | Berat (kg)                | 54           |
- * | Hemoglobin                | 13.2         |
- * | Hari Sejak Donor Terakhir | 90           |
- * | Merasa Sehat              | Ya           |
+ * Data penyelam:
+ * | Informasi                | Nilai     |
+ * | ------------------------ | --------- |
+ * | Nama Penyelam            | Rina Sari |
+ * | Usia                     | 28        |
+ * | Hari Sertifikasi         | 45        |
+ * | Detak Jantung Istirahat  | 76        |
+ * | Hari Sejak Diving Terakhir | 3       |
+ * | Merasa Fit               | Ya        |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
  * 2. Gabungkan semua aturan kelayakan dengan operator logika.
- * 3. Jika layak, tentukan jenis donor dengan if...else bersarang.
- * 4. Tampilkan nama pendonor, kelayakan (true/false), jenis donor, dan
+ * 3. Jika layak, tentukan jenis tabung dengan if...else bersarang.
+ * 4. Tampilkan nama penyelam, kelayakan (true/false), jenis tabung, dan
  *    salah satu pesan berikut:
- *    - "Eligible to donate"
- *    - "Not eligible to donate"
+ *    - "Eligible to dive"
+ *    - "Not eligible to dive"
  *
  * Expected output:
- *  Donor: Joko Widodo
+ *  Diver: Rina Sari
  *  Eligible: true
- *  Donation type: Whole Blood
- *  Eligible to donate
+ *  Tank type: Standard Air
+ *  Eligible to dive
  */
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

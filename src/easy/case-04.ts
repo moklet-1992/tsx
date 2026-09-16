@@ -1,48 +1,48 @@
 /**
- * Easy Case 04 — Same-Day Courier
+ * Easy Case 04 — Food Delivery Quote
  * Points: 100 (Easy)
  *
- * A courier service first checks coverage, then builds the fee from several
- * parts.
+ * A food delivery service first checks coverage, then builds the fee
+ * from several parts.
  *
  * Coverage:
- *  - Distance greater than 25 km → status "Out of coverage" and total fee 0
+ *  - Distance greater than 12 km → status "Out of coverage" and total fee 0
  *  - Otherwise → status "Accepted" and calculate the fee below
  *
  * Fee parts when accepted:
- *  - Base fee = 8000
- *  - Distance fee = distance × 2500
- *  - Weight fee = weight × 1500
- *  - COD fee = 5000 if cash-on-delivery, otherwise 0
- *  - Rain fee = 4000 if it is raining, otherwise 0
- *  - Same-day fee = 10000 if same-day delivery, otherwise 0
+ *  - Base fee = 7000
+ *  - Distance fee = distance × 2000
+ *  - Item fee = item count × 1000
+ *  - Rain fee = 3000 if it is raining, otherwise 0
+ *  - Peak fee = 8000 if it is peak hour, otherwise 0
+ *  - Cutlery fee = 2000 if cutlery is requested, otherwise 0
  *  - Total fee = all parts added together
  *
- * Delivery information:
- * | Information     | Value            |
- * | --------------- | ---------------- |
- * | Sender Name     | Luhut Panjaitan  |
- * | Distance (km)   | 18               |
- * | Weight (kg)     | 4                |
- * | Cash on Delivery| Yes              |
- * | Is Raining      | Yes              |
- * | Same-Day        | Yes              |
+ * Order information:
+ * | Information     | Value       |
+ * | --------------- | ----------- |
+ * | Customer Name   | Andi Wijaya |
+ * | Distance (km)   | 8           |
+ * | Item Count      | 5           |
+ * | Is Raining      | Yes         |
+ * | Is Peak Hour    | Yes         |
+ * | Request Cutlery | Yes         |
  *
  * Tasks:
  * 1. Declare all required variables using the most appropriate data types.
- * 2. Reject the delivery when it is out of coverage.
+ * 2. Reject the order when it is out of coverage.
  * 3. If accepted, calculate every fee part, then the total.
- * 4. Display the sender name, each fee part, total fee, and status.
+ * 4. Display the customer name, each fee part, total fee, and status.
  *
  * Expected output:
- *  Sender: Luhut Panjaitan
- *  Base fee: 8000
- *  Distance fee: 45000
- *  Weight fee: 6000
- *  COD fee: 5000
- *  Rain fee: 4000
- *  Same-day fee: 10000
- *  Total fee: 78000
+ *  Customer: Andi Wijaya
+ *  Base fee: 7000
+ *  Distance fee: 16000
+ *  Item fee: 5000
+ *  Rain fee: 3000
+ *  Peak fee: 8000
+ *  Cutlery fee: 2000
+ *  Total fee: 41000
  *  Status: Accepted
  */
 

@@ -1,35 +1,36 @@
 /**
- * Medium Case 01 — Pantau Suhu Pabrik
+ * Medium Case 01 — Pantau Banjir Sungai
  * Points: 140 (Medium)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Pabrik mencatat suhu mesin setiap jam. Satu jam menjadi alert jika
- * suhu lebih dari 85. Jika ada 3 jam alert atau lebih, shift perlu
- * pemeriksaan shutdown.
+ * Pos sungai mencatat tinggi air setiap jam. Satu jam menjadi alert jika
+ * tinggi air lebih dari 150. Jika ada 3 jam alert atau lebih, kota perlu
+ * siaga evakuasi.
  *
- * Suhu per jam:
- * [78, 82, 88, 91, 80, 86, 79, 84, 90, 77]
+ * Tinggi air per jam:
+ * [120, 135, 148, 162, 140, 171, 155, 130, 168, 125]
  *
  * Fungsi yang wajib:
- *  - isAlert(temperature) → true jika temperature > 85
- *  - countAlerts(temperatures) → berapa jam yang alert (pakai loop)
- *  - findHighest(temperatures) → suhu tertinggi (pakai loop)
+ *  - isAlert(level) → true jika level > 150
+ *  - countAlerts(levels) → berapa jam yang alert (pakai loop)
+ *  - findHighest(levels) → tinggi air tertinggi (pakai loop)
  *
- * Status shift:
- *  - Jam alert >= 3 → "Shutdown check required"
- *  - Selain itu     → "Normal operation"
+ * Status kota:
+ *  - Jam alert >= 3 → "Evacuate standby"
+ *  - Selain itu     → "Normal watch"
  *
  * Tugas:
  * 1. Buat ketiga fungsi di atas.
- * 2. Loop data suhu. Jangan pakai map, filter, atau reduce.
- * 3. Tampilkan total jam, jam alert, suhu tertinggi, dan status shift.
+ * 2. Loop data tinggi air. Jangan pakai map, filter, atau reduce.
+ * 3. Tampilkan total jam, jam alert, tinggi tertinggi, dan status kota.
  *
  * Expected output:
  *  Total hours: 10
  *  Alert hours: 4
- *  Highest temperature: 91
- *  Shutdown check required
+ *  Highest level: 171
+ *  Evacuate standby
  */
 
-const temperatures = [78, 82, 88, 91, 80, 86, 79, 84, 90, 77];
+const waterLevels = [120, 135, 148, 162, 140, 171, 155, 130, 168, 125];
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

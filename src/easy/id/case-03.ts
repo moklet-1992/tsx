@@ -1,38 +1,40 @@
 /**
- * Easy Case 03 — Triase Klinik
+ * Easy Case 03 — Prioritas Helpdesk
  * Points: 100 (Easy)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Klinik Kota Malang menentukan prioritas dan biaya konsultasi dari gejala yang dialami
- * pasien. Periksa aturan dari atas ke bawah dan pakai kecocokan pertama.
+ * Helpdesk menentukan prioritas dan biaya on-site dari tiket.
+ * Periksa aturan dari atas ke bawah dan pakai kecocokan pertama.
  *
- * | Kondisi                                                    | Prioritas | Biaya  |
- * | ---------------------------------------------------------- | --------- | ------ |
- * | Oksigen di bawah 90, ATAU pasien nyeri dada                | Emergency | 150000 |
- * | Suhu 38.5 atau lebih, ATAU oksigen di bawah 95             | Urgent    | 100000 |
- * | Kasus lain                                                 | Normal    | 50000  |
+ * | Kondisi                                                         | Prioritas | Biaya  |
+ * | --------------------------------------------------------------- | --------- | ------ |
+ * | Sistem down, ATAU ada kebocoran keamanan                        | Critical  | 200000 |
+ * | Respons yang diminta di bawah 4 jam, ATAU klien VIP             | High      | 120000 |
+ * | Kasus lain                                                      | Normal    | 60000  |
  *
- * Data pasien:
- * | Informasi       | Nilai         |
- * | --------------- | ------------- |
- * | Nama Pasien     | Puan Maharani |
- * | Suhu (°C)       | 38.7          |
- * | Oksigen (%)     | 94            |
- * | Nyeri Dada      | Tidak         |
+ * Data tiket:
+ * | Informasi                 | Nilai     |
+ * | ------------------------- | --------- |
+ * | Nama Klien                | Sari Dewi |
+ * | Sistem Down               | Tidak     |
+ * | Kebocoran Keamanan        | Tidak     |
+ * | Jam Respons yang Diminta  | 3         |
+ * | Klien VIP                 | Tidak     |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
  * 2. Tentukan prioritas dengan if...else if...else dan operator logika.
- * 3. Setel biaya konsultasi sesuai prioritas yang cocok.
- * 4. Tampilkan nama pasien, prioritas, biaya, dan alasan singkat:
- *    - Emergency → "Critical signs detected"
- *    - Urgent    → "Needs prompt examination"
- *    - Normal    → "Stable condition"
+ * 3. Setel biaya on-site sesuai prioritas yang cocok.
+ * 4. Tampilkan nama klien, prioritas, biaya, dan alasan singkat:
+ *    - Critical → "Immediate action required"
+ *    - High     → "Needs fast handling"
+ *    - Normal   → "Queued for regular support"
  *
  * Expected output:
- *  Patient: Puan Maharani
- *  Priority: Urgent
- *  Fee: 100000
- *  Needs prompt examination
+ *  Client: Sari Dewi
+ *  Priority: High
+ *  Fee: 120000
+ *  Needs fast handling
  */
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

@@ -1,47 +1,49 @@
 /**
- * Easy Case 02 — ATM Cash Withdrawal
+ * Easy Case 02 — Campus Gate Pass
  * Points: 100 (Easy)
  *
- * An ATM must check the transaction in this exact order and stop at the
- * first failed rule:
- *  1. Withdrawal amount must be greater than 0
- *  2. Today's previous withdrawals + this withdrawal must not exceed
- *     the daily limit
- *  3. Withdrawal + admin fee must not exceed the account balance
+ * The campus gate must check a visitor in this exact order and stop at
+ * the first failed rule:
+ *  1. Visit hours must be greater than 0
+ *  2. Hours already used today + this visit must not exceed the daily max
+ *  3. Visit cost + vehicle fee must not exceed prepaid credit
  *
- * Admin fee:
- *  - Other-bank ATM → Rp7,500
- *  - Same-bank ATM  → Rp0
+ * Vehicle fee:
+ *  - Has a car → Rp5,000
+ *  - No car    → Rp0
  *
- * If the transaction is accepted:
- *  - New balance = current balance - withdrawal - admin fee
+ * Visit cost = visit hours × hourly rate
+ *
+ * If the visit is accepted:
+ *  - Remaining credit = prepaid credit - visit cost - vehicle fee
  *  - Status = "Success"
  *
- * If the transaction is rejected:
- *  - New balance stays the same as the current balance
- *  - Status is one of: "Invalid amount", "Daily limit exceeded",
- *    or "Insufficient balance"
+ * If the visit is rejected:
+ *  - Remaining credit stays the same as prepaid credit
+ *  - Status is one of: "Invalid hours", "Daily hours exceeded",
+ *    or "Insufficient credit"
  *
- * Account information:
- * | Information            | Value        |
- * | ---------------------- | ------------ |
- * | Account Holder         | Bahlil Ulala |
- * | Current Balance        | 1250000      |
- * | Withdrawal Amount      | 500000       |
- * | Already Withdrawn Today| 300000       |
- * | Daily Limit            | 1000000      |
- * | Other-Bank ATM         | Yes          |
+ * Visitor information:
+ * | Information          | Value        |
+ * | -------------------- | ------------ |
+ * | Visitor Name         | Doni Pratama |
+ * | Prepaid Credit       | 80000        |
+ * | Visit Hours          | 4            |
+ * | Hours Used Today     | 3            |
+ * | Daily Max Hours      | 8            |
+ * | Hourly Rate          | 10000        |
+ * | Has Car              | Yes          |
  *
  * Tasks:
  * 1. Declare all required variables using the most appropriate data types.
- * 2. Determine the admin fee using if...else.
- * 3. Validate the transaction in the required order using if...else if...else.
- * 4. Display the account holder, admin fee, new balance, and status.
+ * 2. Determine the vehicle fee using if...else.
+ * 3. Validate the visit in the required order using if...else if...else.
+ * 4. Display the visitor name, vehicle fee, remaining credit, and status.
  *
  * Expected output:
- *  Account holder: Bahlil Ulala
- *  Admin fee: 7500
- *  New balance: 742500
+ *  Visitor: Doni Pratama
+ *  Vehicle fee: 5000
+ *  Remaining credit: 35000
  *  Status: Success
  */
 

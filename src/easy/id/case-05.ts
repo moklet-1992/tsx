@@ -1,15 +1,16 @@
 /**
- * Easy Case 05 — Klaim Asuransi Perjalanan
+ * Easy Case 05 — Klaim Garansi Ponsel
  * Points: 100 (Easy)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Kantor asuransi Moklet Insurance menyetujui klaim hanya jika SEMUA aturan berikut benar:
- *  - Polis sudah aktif minimal 3 bulan
- *  - Nilai klaim lebih besar dari biaya dana pengaman
- *  - Jika klaim adalah kasus pencurian, harus ada laporan polisi
- *    (klaim non-pencurian tidak wajib laporan polisi)
+ * Service center menyetujui klaim garansi hanya jika SEMUA aturan berikut benar:
+ *  - Usia perangkat maksimal 12 bulan
+ *  - Nilai klaim lebih besar dari biaya servis
+ *  - Jika klaim adalah kerusakan air, harus ada bukti waterproof
+ *    (klaim non-air tidak wajib bukti waterproof)
  *
  * Jika disetujui:
- *  - Pembayaran = nilai klaim - biaya dana pengaman
+ *  - Pembayaran = nilai klaim - biaya servis
  *  - Status = "Approved"
  *
  * Jika ditolak:
@@ -17,26 +18,26 @@
  *  - Status = "Rejected"
  *
  * Data klaim:
- * | Informasi            | Nilai            |
- * | -------------------- | ---------------- |
- * | Nama Pemohon         | Prabowo Subianto |
- * | Bulan Polis Aktif    | 5                |
- * | Nilai Klaim          | 2000000          |
- * | Deductible           | 500000           |
- * | Kasus Pencurian      | Ya               |
- * | Ada Laporan Polisi   | Ya               |
+ * | Informasi            | Nilai        |
+ * | -------------------- | ------------ |
+ * | Nama Pelanggan       | Maya Kartika |
+ * | Usia Perangkat (bln) | 8            |
+ * | Nilai Klaim          | 1500000      |
+ * | Biaya Servis         | 250000       |
+ * | Kerusakan Air        | Ya           |
+ * | Ada Bukti Waterproof | Ya           |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
- * 2. Tulis aturan pencurian agar wajib hanya jika klaim adalah pencurian.
- *    Petunjuk: !isTheft || hasPoliceReport
+ * 2. Tulis aturan kerusakan air agar wajib hanya jika klaim adalah air.
+ *    Petunjuk: !isWaterDamage || hasWaterproofProof
  * 3. Gabungkan semua aturan persetujuan dengan operator logika.
- * 4. Hitung pembayaran dan tampilkan nama pemohon, pembayaran, dan status.
+ * 4. Hitung pembayaran dan tampilkan nama pelanggan, pembayaran, dan status.
  *
  * Expected output:
- *  Claimant: Prabowo Subianto
- *  Payout: 1500000
+ *  Customer: Maya Kartika
+ *  Payout: 1250000
  *  Status: Approved
  */
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

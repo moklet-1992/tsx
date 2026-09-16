@@ -1,38 +1,39 @@
 /**
- * Medium Case 04 — Naik Bus Malam
+ * Medium Case 04 — Naik Feri
  * Points: 140 (Medium)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Bus malam punya 12 kursi. true artinya terisi, false artinya kosong.
- * Rombongan 3 penumpang ingin naik.
+ * Feri punya 12 slot kendaraan. true artinya terisi, false artinya kosong.
+ * Rombongan 4 kendaraan ingin naik.
  *
- * Peta kursi (kursi 1 sampai 12):
- * [true, false, true, true, false, false, true, false, true, false, false, true]
+ * Peta slot (slot 1 sampai 12):
+ * [true, true, false, true, false, false, true, false, true, true, false, false]
  *
  * Fungsi yang wajib:
- *  - countEmpty(seats) → berapa kursi kosong (pakai loop)
- *  - findFirstEmptySeat(seats) → nomor kursi kosong pertama (mulai dari 1).
- *    Kembalikan 0 jika tidak ada kursi kosong.
- *  - canBoard(emptyCount, passengerCount) → true jika emptyCount >= passengerCount
+ *  - countEmpty(slots) → berapa slot kosong (pakai loop)
+ *  - findFirstEmptySlot(slots) → nomor slot kosong pertama (mulai dari 1).
+ *    Kembalikan 0 jika tidak ada slot kosong.
+ *  - canBoard(emptyCount, vehicleCount) → true jika emptyCount >= vehicleCount
  *
- * Pesan bus:
+ * Pesan feri:
  *  - empty === 0              → "Sold out"
- *  - empty > 0 dan empty < 3  → "Almost full"
- *  - empty >= 3               → "Seats available"
+ *  - empty > 0 dan empty < 4  → "Almost full"
+ *  - empty >= 4               → "Slots available"
  *
  * Tugas:
  * 1. Buat ketiga fungsi.
- * 2. Loop peta kursi. Jangan pakai map, filter, indexOf, atau find.
- * 3. Tampilkan kursi kosong, nomor kursi kosong pertama, apakah rombongan
- *    bisa naik, dan pesan bus.
+ * 2. Loop peta slot. Jangan pakai map, filter, indexOf, atau find.
+ * 3. Tampilkan slot kosong, nomor slot kosong pertama, apakah rombongan
+ *    bisa naik, dan pesan feri.
  *
  * Expected output:
- *  Empty seats: 6
- *  First empty seat: 2
+ *  Empty slots: 6
+ *  First empty slot: 3
  *  Can board: true
- *  Seats available
+ *  Slots available
  */
 
-const seats = [true, false, true, true, false, false, true, false, true, false, false, true];
-const passengerCount = 3;
+const slots = [true, true, false, true, false, false, true, false, true, true, false, false];
+const vehicleCount = 4;
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

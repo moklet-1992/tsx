@@ -1,17 +1,17 @@
 /**
- * Medium Case 06 — Warehouse Restock Plan
+ * Medium Case 06 — Fuel Station Restock
  * Points: 140 (Medium)
  *
- * A warehouse builds a restock plan for spare parts. A product is restocked
- * only when current stock is below the minimum stock.
+ * A fuel station builds a restock plan. A product is restocked only when
+ * current stock is below the minimum stock.
  *
- * | Product    | Stock | Min Stock | Max Stock | Unit Price |
- * | ---------- | ----- | --------- | --------- | ---------- |
- * | Bolt M8    | 40    | 100       | 400       | 500        |
- * | Nut M8     | 180   | 150       | 500       | 300        |
- * | Washer     | 20    | 80        | 300       | 200        |
- * | Screw 3cm  | 250   | 200       | 600       | 400        |
- * | Anchor     | 45    | 120       | 360       | 1500       |
+ * | Product       | Stock | Min Stock | Max Stock | Unit Price |
+ * | ------------- | ----- | --------- | --------- | ---------- |
+ * | Pertalite     | 800   | 2000      | 8000      | 10000      |
+ * | Pertamax      | 3500  | 2500      | 6000      | 14000      |
+ * | Dexlite       | 400   | 1500      | 5000      | 15000      |
+ * | Pertamina Dex | 5000  | 2000      | 7000      | 16000      |
+ * | Biosolar      | 900   | 2200      | 6600      | 9000       |
  *
  * Formulas:
  *  - Reorder qty = max stock - current stock, when stock < min stock
@@ -34,19 +34,19 @@
  *    the total order cost, and the product name with the highest order cost.
  *
  * Expected output:
- *  Bolt M8 | qty 360 | priority true | cost 180000
- *  Washer | qty 280 | priority true | cost 56000
- *  Anchor | qty 315 | priority true | cost 472500
+ *  Pertalite | qty 7200 | priority true | cost 72000000
+ *  Dexlite | qty 4600 | priority true | cost 69000000
+ *  Biosolar | qty 5700 | priority true | cost 51300000
  *  Products restocked: 3
  *  Priority items: 3
- *  Total order cost: 708500
- *  Highest cost item: Anchor
+ *  Total order cost: 192300000
+ *  Highest cost item: Pertalite
  */
 
-const productNames = ["Bolt M8", "Nut M8", "Washer", "Screw 3cm", "Anchor"];
-const stocks = [40, 180, 20, 250, 45];
-const minStocks = [100, 150, 80, 200, 120];
-const maxStocks = [400, 500, 300, 600, 360];
-const unitPrices = [500, 300, 200, 400, 1500];
+const productNames = ["Pertalite", "Pertamax", "Dexlite", "Pertamina Dex", "Biosolar"];
+const stocks = [800, 3500, 400, 5000, 900];
+const minStocks = [2000, 2500, 1500, 2000, 2200];
+const maxStocks = [8000, 6000, 5000, 7000, 6600];
+const unitPrices = [10000, 14000, 15000, 16000, 9000];
 
 // Write your solution below.

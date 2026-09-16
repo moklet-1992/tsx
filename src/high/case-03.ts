@@ -1,53 +1,53 @@
 /**
- * High Case 03 — Clinic Staff (OOP)
+ * High Case 03 — Delivery Crew (OOP)
  * Points: 160 (High — OOP)
  *
- * Nurses and doctors are different objects that share a parent class.
+ * Riders and dispatchers are different objects that share a parent class.
  * Create each person with new, then store them in one array. Do not
  * create a roster/manager class, and do not pass an array into a constructor.
  *
- * Staff data:
- * | Name  | Role   | Hours | Extra          |
- * | ----- | ------ | ----- | -------------- |
- * | Maya  | Nurse  | 40    | 8 night hours  |
- * | Raka  | Nurse  | 36    | 0 night hours  |
- * | Lina  | Doctor | 20    | On call        |
- * | Budi  | Doctor | 16    | Not on call    |
- * | Sinta | Nurse  | 42    | 12 night hours |
+ * Crew data:
+ * | Name  | Role       | Hours | Extra            |
+ * | ----- | ---------- | ----- | ---------------- |
+ * | Maya  | Rider      | 36    | 10 night drops   |
+ * | Raka  | Rider      | 30    | 0 night drops    |
+ * | Lina  | Dispatcher | 20    | Weekend duty     |
+ * | Budi  | Dispatcher | 18    | Not weekend      |
+ * | Sinta | Rider      | 40    | 8 night drops    |
  *
  * Pay rules:
- *  - StaffMember.getPay() → hours × 50000
- *  - Nurse.getPay()       → hours × 50000 + nightHours × 25000
- *  - Doctor.getPay()      → hours × 120000 + 400000 when on call
+ *  - StaffMember.getPay() → hours × 40000
+ *  - Rider.getPay()       → hours × 40000 + nightDrops × 15000
+ *  - Dispatcher.getPay()  → hours × 70000 + 250000 when weekend duty
  *
  * Required class StaffMember (one person):
  *  - Properties: name, hours
  *  - getRole() → "Staff"
- *  - getPay() → hours × 50000
+ *  - getPay() → hours × 40000
  *
- * Required class Nurse extends StaffMember:
- *  - Extra property: nightHours
- *  - getRole() → "Nurse"
+ * Required class Rider extends StaffMember:
+ *  - Extra property: nightDrops
+ *  - getRole() → "Rider"
  *  - Override getPay()
  *
- * Required class Doctor extends StaffMember:
- *  - Extra property: isOnCall
- *  - getRole() → "Doctor"
+ * Required class Dispatcher extends StaffMember:
+ *  - Extra property: isWeekend
+ *  - getRole() → "Dispatcher"
  *  - Override getPay()
  *
  * Tasks:
  * 1. Create the three classes. Do not create a fourth collection class.
- * 2. Create each staff member with new Nurse(...) or new Doctor(...).
+ * 2. Create each crew member with new Rider(...) or new Dispatcher(...).
  * 3. Put them into an array:
- *    const staff = [maya, raka, lina, budi, sinta]
+ *    const crew = [maya, raka, lina, budi, sinta]
  * 4. Display role, name, and pay for every person (a for...of loop is allowed).
  *
  * Expected output:
- *  Nurse Maya: 2200000
- *  Nurse Raka: 1800000
- *  Doctor Lina: 2800000
- *  Doctor Budi: 1920000
- *  Nurse Sinta: 2400000
+ *  Rider Maya: 1590000
+ *  Rider Raka: 1200000
+ *  Dispatcher Lina: 1650000
+ *  Dispatcher Budi: 1260000
+ *  Rider Sinta: 1720000
  */
 
 // Write your solution below.

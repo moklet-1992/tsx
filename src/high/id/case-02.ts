@@ -1,38 +1,39 @@
 /**
- * High Case 02 — Tiket Konser (OOP)
+ * High Case 02 — Kartu Museum (OOP)
  * Points: 160 (High — OOP)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Tiket konser Specta Show adalah suatu objek. Buat beberapa tiket, simpan ke dalam
+ * Kartu museum adalah satu objek. Buat beberapa kartu, simpan dalam
  * array, dan ubah state lewat method class. Jangan membuat class gerbang,
  * dan jangan memasukkan array ke constructor.
  *
- * Data tiket:
+ * Data kartu:
  * | Kode | Kategori | Harga  | Sudah Dipakai |
  * | ---- | -------- | ------ | ------------- |
- * | A1   | regular  | 150000 | Tidak         |
- * | A2   | vip      | 350000 | Tidak         |
- * | A3   | regular  | 150000 | Ya            |
- * | A4   | vip      | 350000 | Tidak         |
+ * | M1   | regular  | 80000  | Tidak         |
+ * | M2   | vip      | 200000 | Tidak         |
+ * | M3   | regular  | 80000  | Ya            |
+ * | M4   | vip      | 200000 | Tidak         |
  *
- * Class wajib Ticket (satu objek):
+ * Class wajib Pass (satu objek):
  *  - Properti: code, category, price, isUsed
  *  - getStatus() → "Used" jika isUsed true, selain itu "Valid"
  *  - markUsed() → set isUsed menjadi true
- *  - canEnter() → true hanya jika tiket belum dipakai
- *  - getRefund() → 0 jika sudah dipakai, selain itu 50% dari harga
+ *  - canEnter() → true hanya jika kartu belum dipakai
+ *  - getRefund() → 0 jika sudah dipakai, selain itu 40% dari harga
  *
  * Tugas:
- * 1. Buat hanya class Ticket.
- * 2. Buat empat objek Ticket dengan new Ticket(...).
- * 3. Masukkan ke array: const tickets = [ticketA1, ticketA2, ticketA3, ticketA4]
- * 4. Panggil markUsed() pada A1.
- * 5. Tampilkan kode, status, canEnter, dan refund untuk setiap tiket.
+ * 1. Buat hanya class Pass.
+ * 2. Buat empat objek Pass dengan new Pass(...).
+ * 3. Masukkan ke array: const passes = [passM1, passM2, passM3, passM4]
+ * 4. Panggil markUsed() pada M1.
+ * 5. Tampilkan kode, status, canEnter, dan refund untuk setiap kartu.
  *
  * Expected output:
- *  A1 | Used | enter false | refund 0
- *  A2 | Valid | enter true | refund 175000
- *  A3 | Used | enter false | refund 0
- *  A4 | Valid | enter true | refund 175000
+ *  M1 | Used | enter false | refund 0
+ *  M2 | Valid | enter true | refund 80000
+ *  M3 | Used | enter false | refund 0
+ *  M4 | Valid | enter true | refund 80000
  */
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

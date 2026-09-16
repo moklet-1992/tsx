@@ -1,53 +1,54 @@
 /**
- * High Case 03 — Staf Klinik (OOP)
+ * High Case 03 — Kru Pengiriman (OOP)
  * Points: 160 (High — OOP)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Perawat dan dokter adalah objek berbeda yang berbagi class induk.
- * Buat setiap orang dengan new, lalu simpan ke dalam satu array. Jangan
+ * Rider dan dispatcher adalah objek berbeda yang berbagi class induk.
+ * Buat setiap orang dengan new, lalu simpan dalam satu array. Jangan
  * membuat class roster/manager, dan jangan memasukkan array ke constructor.
  *
- * Data staf:
- * | Nama  | Peran  | Jam | Tambahan         |
- * | ----- | ------ | --- | ---------------- |
- * | Maya  | Nurse  | 40  | 8 jam malam      |
- * | Raka  | Nurse  | 36  | 0 jam malam      |
- * | Lina  | Doctor | 20  | On call          |
- * | Budi  | Doctor | 16  | Tidak on call    |
- * | Sinta | Nurse  | 42  | 12 jam malam     |
+ * Data kru:
+ * | Nama  | Peran      | Jam | Tambahan          |
+ * | ----- | ---------- | --- | ----------------- |
+ * | Maya  | Rider      | 36  | 10 drop malam     |
+ * | Raka  | Rider      | 30  | 0 drop malam      |
+ * | Lina  | Dispatcher | 20  | Tugas akhir pekan |
+ * | Budi  | Dispatcher | 18  | Bukan akhir pekan |
+ * | Sinta | Rider      | 40  | 8 drop malam      |
  *
  * Aturan gaji:
- *  - StaffMember.getPay() → jam × 50000
- *  - Nurse.getPay()       → jam × 50000 + jamMalam × 25000
- *  - Doctor.getPay()      → jam × 120000 + 400000 jika on call
+ *  - StaffMember.getPay() → jam × 40000
+ *  - Rider.getPay()       → jam × 40000 + dropMalam × 15000
+ *  - Dispatcher.getPay()  → jam × 70000 + 250000 jika tugas akhir pekan
  *
  * Class wajib StaffMember (satu orang):
  *  - Properti: name, hours
  *  - getRole() → "Staff"
- *  - getPay() → jam × 50000
+ *  - getPay() → jam × 40000
  *
- * Class wajib Nurse extends StaffMember:
- *  - Properti tambahan: nightHours
- *  - getRole() → "Nurse"
+ * Class wajib Rider extends StaffMember:
+ *  - Properti tambahan: nightDrops
+ *  - getRole() → "Rider"
  *  - Override getPay()
  *
- * Class wajib Doctor extends StaffMember:
- *  - Properti tambahan: isOnCall
- *  - getRole() → "Doctor"
+ * Class wajib Dispatcher extends StaffMember:
+ *  - Properti tambahan: isWeekend
+ *  - getRole() → "Dispatcher"
  *  - Override getPay()
  *
  * Tugas:
  * 1. Buat ketiga class. Jangan membuat class koleksi keempat.
- * 2. Buat setiap staf dengan new Nurse(...) atau new Doctor(...).
+ * 2. Buat setiap kru dengan new Rider(...) atau new Dispatcher(...).
  * 3. Masukkan ke array:
- *    const staff = [maya, raka, lina, budi, sinta]
+ *    const crew = [maya, raka, lina, budi, sinta]
  * 4. Tampilkan peran, nama, dan gaji setiap orang (loop for...of diperbolehkan).
  *
  * Expected output:
- *  Nurse Maya: 2200000
- *  Nurse Raka: 1800000
- *  Doctor Lina: 2800000
- *  Doctor Budi: 1920000
- *  Nurse Sinta: 2400000
+ *  Rider Maya: 1590000
+ *  Rider Raka: 1200000
+ *  Dispatcher Lina: 1650000
+ *  Dispatcher Budi: 1260000
+ *  Rider Sinta: 1720000
  */
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

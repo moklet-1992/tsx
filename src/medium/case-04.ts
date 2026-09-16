@@ -1,38 +1,38 @@
 /**
- * Medium Case 04 — Night Bus Boarding
+ * Medium Case 04 — Ferry Boarding
  * Points: 140 (Medium)
  *
- * A night bus has 12 seats. true means occupied, false means empty.
- * A group of 3 passengers wants to board.
+ * A ferry has 12 vehicle slots. true means occupied, false means empty.
+ * A group of 4 vehicles wants to board.
  *
- * Seat map (seat 1 to seat 12):
- * [true, false, true, true, false, false, true, false, true, false, false, true]
+ * Slot map (slot 1 to slot 12):
+ * [true, true, false, true, false, false, true, false, true, true, false, false]
  *
  * Required functions:
- *  - countEmpty(seats) → how many seats are empty (use a loop)
- *  - findFirstEmptySeat(seats) → the first empty seat number (1-based).
- *    Return 0 when no seat is empty.
- *  - canBoard(emptyCount, passengerCount) → true when emptyCount >= passengerCount
+ *  - countEmpty(slots) → how many slots are empty (use a loop)
+ *  - findFirstEmptySlot(slots) → the first empty slot number (1-based).
+ *    Return 0 when no slot is empty.
+ *  - canBoard(emptyCount, vehicleCount) → true when emptyCount >= vehicleCount
  *
- * Bus message:
+ * Ferry message:
  *  - empty === 0              → "Sold out"
- *  - empty > 0 and empty < 3  → "Almost full"
- *  - empty >= 3               → "Seats available"
+ *  - empty > 0 and empty < 4  → "Almost full"
+ *  - empty >= 4               → "Slots available"
  *
  * Tasks:
  * 1. Create the three functions.
- * 2. Loop the seat map. Do not use map, filter, indexOf, or find.
- * 3. Display empty seats, first empty seat number, whether the group can board,
- *    and the bus message.
+ * 2. Loop the slot map. Do not use map, filter, indexOf, or find.
+ * 3. Display empty slots, first empty slot number, whether the group can board,
+ *    and the ferry message.
  *
  * Expected output:
- *  Empty seats: 6
- *  First empty seat: 2
+ *  Empty slots: 6
+ *  First empty slot: 3
  *  Can board: true
- *  Seats available
+ *  Slots available
  */
 
-const seats = [true, false, true, true, false, false, true, false, true, false, false, true];
-const passengerCount = 3;
+const slots = [true, true, false, true, false, false, true, false, true, true, false, false];
+const vehicleCount = 4;
 
 // Write your solution below.

@@ -1,43 +1,43 @@
 /**
- * Easy Case 06 — Pra-Cek Kredit Motor
+ * Easy Case 06 — Pra-Cek Sewa Apartemen
  * Points: 100 (Easy)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Perusahaan pembiayaan Moklet Finance melakukan skrining pertama sebelum tinjauan kredit
- * penuh. Pengajuan disetujui awal hanya jika SEMUA aturan berikut benar:
- *  - Usia 21 sampai 55 (inklusif)
- *  - Pengalaman kerja minimal 12 bulan
- *  - Pinjaman yang diminta tidak lebih besar dari pinjaman maksimum
- *  - Rasio utang tidak lebih besar dari 0.4
+ * Kantor sewa melakukan skrining pertama. Pengajuan disetujui awal hanya
+ * jika SEMUA aturan berikut benar:
+ *  - Usia 21 sampai 50 (inklusif)
+ *  - Pengalaman kerja minimal 6 bulan
+ *  - Sewa yang diminta tidak lebih besar dari sewa maksimum
+ *  - Rasio sewa tidak lebih besar dari 0.3
  *
  * Rumus:
- *  - Pinjaman maksimum = penghasilan bulanan × 4
- *  - Cicilan baru = pinjaman yang diminta × 0.04
- *  - Rasio utang = (cicilan existing + cicilan baru) / penghasilan bulanan
+ *  - Sewa maksimum = penghasilan bulanan × 0.3
+ *  - Deposit = sewa yang diminta × 2
+ *  - Rasio sewa = sewa yang diminta / penghasilan bulanan
  *
  * Data pemohon:
- * | Informasi            | Nilai        |
- * | -------------------- | ------------ |
- * | Nama Pemohon         | Gibran Rakka |
- * | Usia                 | 24           |
- * | Bulan Kerja          | 18           |
- * | Penghasilan Bulanan  | 6000000      |
- * | Cicilan Existing     | 800000       |
- * | Pinjaman Diminta     | 20000000     |
+ * | Informasi           | Nilai         |
+ * | ------------------- | ------------- |
+ * | Nama Pemohon        | Fajar Hidayat |
+ * | Usia                | 26            |
+ * | Bulan Kerja         | 14            |
+ * | Penghasilan Bulanan | 8000000       |
+ * | Sewa yang Diminta   | 2200000       |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
- * 2. Hitung pinjaman maksimum, cicilan baru, dan rasio utang.
+ * 2. Hitung sewa maksimum, deposit, dan rasio sewa.
  * 3. Gabungkan semua aturan skrining dengan operator logika.
- * 4. Tampilkan nama pemohon, pinjaman maksimum, cicilan baru, rasio utang,
+ * 4. Tampilkan nama pemohon, sewa maksimum, deposit, rasio sewa,
  *    dan salah satu pesan berikut:
  *    - "Pre-approved"
  *    - "Rejected"
  *
  * Expected output:
- *  Applicant: Gibran Rakka
- *  Maximum loan: 24000000
- *  New installment: 800000
- *  Debt ratio: 0.2666... (atau 0.27)
+ *  Applicant: Fajar Hidayat
+ *  Maximum rent: 2400000
+ *  Deposit: 4400000
+ *  Rent ratio: 0.275
  *  Pre-approved
  */
 

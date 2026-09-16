@@ -1,47 +1,48 @@
 /**
- * Medium Case 02 — Shift Gerbang Tol
+ * Medium Case 02 — Shift Dermaga Pelabuhan
  * Points: 140 (Medium)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Gerbang tol memungut tarif menurut jenis kendaraan. Shift ini adalah
- * shift malam, jadi biaya malam ditambahkan setelah semua kendaraan dihitung.
+ * Pelabuhan memungut tarif menurut jenis kapal. Shift ini ada peringatan
+ * badai, jadi biaya badai ditambahkan setelah semua kapal dihitung.
  *
- * Jenis kendaraan shift ini:
- * ["car", "truck", "car", "bus", "motorcycle", "truck", "car", "truck"]
+ * Jenis kapal shift ini:
+ * ["ferry", "cargo", "ferry", "yacht", "speedboat", "cargo", "ferry", "cargo"]
  *
  * Tarif dasar:
- * | Jenis      | Tarif |
- * | ---------- | ----- |
- * | motorcycle | 3000  |
- * | car        | 8000  |
- * | bus        | 15000 |
- * | truck      | 20000 |
- * | lainnya    | 0     |
+ * | Jenis     | Tarif |
+ * | --------- | ----- |
+ * | speedboat | 4000  |
+ * | ferry     | 12000 |
+ * | yacht     | 20000 |
+ * | cargo     | 25000 |
+ * | lainnya   | 0     |
  *
- * Biaya malam = 25% dari total tarif dasar.
- * Setoran akhir = total tarif dasar + biaya malam.
+ * Biaya badai = 20% dari total tarif dasar.
+ * Setoran akhir = total tarif dasar + biaya badai.
  *
  * Fungsi yang wajib:
- *  - getBaseFee(vehicleType) → tarif untuk jenis itu
- *  - getNightSurcharge(totalBaseFee, isNight) → 25% jika isNight true, selain itu 0
+ *  - getBaseFee(vesselType) → tarif untuk jenis itu
+ *  - getStormSurcharge(totalBaseFee, isStorm) → 20% jika isStorm true, selain itu 0
  *
  * Tugas:
  * 1. Buat kedua fungsi.
- * 2. Loop kendaraan. Hitung jumlah tiap jenis dan jumlahkan tarif dasar.
+ * 2. Loop kapal. Hitung jumlah tiap jenis dan jumlahkan tarif dasar.
  *    Jangan pakai map, filter, atau reduce.
- * 3. Terapkan biaya malam karena ini shift malam.
- * 4. Tampilkan jumlah tiap jenis, total tarif dasar, biaya malam, dan setoran akhir.
+ * 3. Terapkan biaya badai karena ini shift badai.
+ * 4. Tampilkan jumlah tiap jenis, total tarif dasar, biaya badai, dan setoran akhir.
  *
  * Expected output:
- *  Motorcycle: 1
- *  Car: 3
- *  Bus: 1
- *  Truck: 3
- *  Total base fee: 102000
- *  Night surcharge: 25500
- *  Final collection: 127500
+ *  Speedboat: 1
+ *  Ferry: 3
+ *  Yacht: 1
+ *  Cargo: 3
+ *  Total base fee: 135000
+ *  Storm surcharge: 27000
+ *  Final collection: 162000
  */
 
-const vehicleTypes = ["car", "truck", "car", "bus", "motorcycle", "truck", "car", "truck"];
-const isNightShift = true;
+const vesselTypes = ["ferry", "cargo", "ferry", "yacht", "speedboat", "cargo", "ferry", "cargo"];
+const isStormShift = true;
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

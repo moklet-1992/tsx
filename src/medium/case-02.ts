@@ -1,47 +1,47 @@
 /**
- * Medium Case 02 — Toll Plaza Shift
+ * Medium Case 02 — Harbor Dock Shift
  * Points: 140 (Medium)
  *
- * A toll plaza charges each vehicle by type. This shift is a night shift, so
- * a night surcharge is added to the total after every vehicle is counted.
+ * A harbor charges each vessel by type. This shift has a storm warning,
+ * so a storm surcharge is added to the total after every vessel is counted.
  *
- * Vehicle types this shift:
- * ["car", "truck", "car", "bus", "motorcycle", "truck", "car", "truck"]
+ * Vessel types this shift:
+ * ["ferry", "cargo", "ferry", "yacht", "speedboat", "cargo", "ferry", "cargo"]
  *
  * Base fee:
- * | Type       | Fee   |
- * | ---------- | ----- |
- * | motorcycle | 3000  |
- * | car        | 8000  |
- * | bus        | 15000 |
- * | truck      | 20000 |
- * | any other  | 0     |
+ * | Type      | Fee   |
+ * | --------- | ----- |
+ * | speedboat | 4000  |
+ * | ferry     | 12000 |
+ * | yacht     | 20000 |
+ * | cargo     | 25000 |
+ * | any other | 0     |
  *
- * Night surcharge = 25% of the total base fee.
- * Final collection = total base fee + night surcharge.
+ * Storm surcharge = 20% of the total base fee.
+ * Final collection = total base fee + storm surcharge.
  *
  * Required functions:
- *  - getBaseFee(vehicleType) → the fee for that type
- *  - getNightSurcharge(totalBaseFee, isNight) → 25% when isNight is true, else 0
+ *  - getBaseFee(vesselType) → the fee for that type
+ *  - getStormSurcharge(totalBaseFee, isStorm) → 20% when isStorm is true, else 0
  *
  * Tasks:
  * 1. Create both functions.
- * 2. Loop the vehicles. Count each type and add up the base fees.
+ * 2. Loop the vessels. Count each type and add up the base fees.
  *    Do not use map, filter, or reduce.
- * 3. Apply the night surcharge only because this is a night shift.
+ * 3. Apply the storm surcharge only because this is a storm shift.
  * 4. Display every type count, total base fee, surcharge, and final collection.
  *
  * Expected output:
- *  Motorcycle: 1
- *  Car: 3
- *  Bus: 1
- *  Truck: 3
- *  Total base fee: 102000
- *  Night surcharge: 25500
- *  Final collection: 127500
+ *  Speedboat: 1
+ *  Ferry: 3
+ *  Yacht: 1
+ *  Cargo: 3
+ *  Total base fee: 135000
+ *  Storm surcharge: 27000
+ *  Final collection: 162000
  */
 
-const vehicleTypes = ["car", "truck", "car", "bus", "motorcycle", "truck", "car", "truck"];
-const isNightShift = true;
+const vesselTypes = ["ferry", "cargo", "ferry", "yacht", "speedboat", "cargo", "ferry", "cargo"];
+const isStormShift = true;
 
 // Write your solution below.

@@ -1,38 +1,39 @@
 /**
- * High Case 01 — Meja Co-working (OOP)
+ * High Case 01 — Loker Gym (OOP)
  * Points: 160 (High — OOP)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Ruang co-working memodelkan SATU meja sebagai class. Buat beberapa
- * objek meja, lalu simpan dalam array. Jangan membuat class board/manager,
- * dan jangan memasukkan array ke constructor.
+ * Gym memodelkan SATU loker sebagai class. Buat beberapa objek loker,
+ * lalu simpan dalam array. Jangan membuat class board/manager, dan jangan
+ * memasukkan array ke constructor.
  *
- * Data meja:
- * | ID  | Lantai | Terisi | Tarif per Jam |
- * | --- | ------ | ------ | ------------- |
- * | D01 | 1      | Tidak  | 25000         |
- * | D02 | 1      | Ya     | 25000         |
- * | D03 | 2      | Tidak  | 35000         |
- * | D04 | 3      | Ya     | 45000         |
+ * Data loker:
+ * | ID  | Lantai | Terpakai | Tarif per Bulan |
+ * | --- | ------ | -------- | --------------- |
+ * | L01 | 1      | Tidak    | 80000           |
+ * | L02 | 1      | Ya       | 80000           |
+ * | L03 | 2      | Tidak    | 100000          |
+ * | L04 | 3      | Ya       | 120000          |
  *
- * Class wajib Desk (satu objek):
- *  - Properti: id, floor, isOccupied, hourlyRate
- *  - getLabel() → gaya "D01-F1" (id + "-F" + floor)
- *  - occupy() → set isOccupied menjadi true
- *  - release() → set isOccupied menjadi false
- *  - getDailyEstimate() → hourlyRate × 8
+ * Class wajib Locker (satu objek):
+ *  - Properti: id, floor, isTaken, monthlyRate
+ *  - getLabel() → gaya "L01-F1" (id + "-F" + floor)
+ *  - assign() → set isTaken menjadi true
+ *  - vacate() → set isTaken menjadi false
+ *  - getYearlyEstimate() → monthlyRate × 12
  *
  * Tugas:
- * 1. Buat hanya class Desk.
- * 2. Buat empat objek Desk dengan new Desk(...).
- * 3. Masukkan ke array: const desks = [desk1, desk2, desk3, desk4]
- * 4. Panggil occupy() pada D03 dan release() pada D02.
- * 5. Tampilkan setiap meja memakai method class (loop for...of diperbolehkan).
+ * 1. Buat hanya class Locker.
+ * 2. Buat empat objek Locker dengan new Locker(...).
+ * 3. Masukkan ke array: const lockers = [locker1, locker2, locker3, locker4]
+ * 4. Panggil assign() pada L03 dan vacate() pada L02.
+ * 5. Tampilkan setiap loker memakai method class (loop for...of diperbolehkan).
  *
  * Expected output:
- *  D01-F1 | occupied false | daily 200000
- *  D02-F1 | occupied false | daily 200000
- *  D03-F2 | occupied true | daily 280000
- *  D04-F3 | occupied true | daily 360000
+ *  L01-F1 | taken false | yearly 960000
+ *  L02-F1 | taken false | yearly 960000
+ *  L03-F2 | taken true | yearly 1200000
+ *  L04-F3 | taken true | yearly 1440000
  */
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

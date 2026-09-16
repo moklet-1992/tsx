@@ -1,36 +1,37 @@
 /**
- * Medium Case 05 — Sampel Instalasi Air
+ * Medium Case 05 — Sampel Kualitas Udara
  * Points: 140 (Medium)
+ * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Instalasi air menguji 6 sampel. Klasifikasikan setiap sampel dari atas
+ * Lab kota menguji 6 sampel udara. Klasifikasikan setiap sampel dari atas
  * ke bawah dan pakai aturan yang pertama kali cocok.
  *
- *  1. "Unsafe"  jika pH < 6.5 ATAU pH > 8.5 ATAU kekeruhan > 5 ATAU bakteri > 0
- *  2. "Caution" jika pH < 6.8 ATAU pH > 8.2 ATAU kekeruhan > 2
+ *  1. "Unsafe"  jika AQI > 150 ATAU pm25 > 75 ATAU ozone > 200
+ *  2. "Caution" jika AQI > 80 ATAU pm25 > 35
  *  3. "Safe"    jika tidak termasuk di atas
  *
- * Keputusan instalasi:
- *  - Minimal satu sampel Unsafe → "Stop distribution"
- *  - Selain itu                 → "Distribution allowed"
+ * Keputusan kota:
+ *  - Minimal satu sampel Unsafe → "Stop outdoor activity"
+ *  - Selain itu                 → "Outdoor activity allowed"
  *
- * | Sampel | pH  | Kekeruhan | Bakteri |
- * | ------ | --- | --------- | ------- |
- * | S1     | 7.2 | 1.0       | 0       |
- * | S2     | 6.6 | 2.5       | 0       |
- * | S3     | 8.7 | 1.2       | 0       |
- * | S4     | 7.0 | 0.8       | 1       |
- * | S5     | 7.4 | 3.0       | 0       |
- * | S6     | 7.1 | 1.5       | 0       |
+ * | Sampel | AQI | PM2.5 | Ozone |
+ * | ------ | --- | ----- | ----- |
+ * | S1     | 72  | 20    | 80    |
+ * | S2     | 95  | 40    | 90    |
+ * | S3     | 160 | 30    | 70    |
+ * | S4     | 70  | 20    | 210   |
+ * | S5     | 85  | 36    | 100   |
+ * | S6     | 60  | 15    | 50    |
  *
  * Fungsi yang wajib:
- *  - classifySample(ph, turbidity, bacteria) → "Unsafe", "Caution", atau "Safe"
- *  - getPlantDecision(unsafeCount) → pesan keputusan instalasi
+ *  - classifySample(aqi, pm25, ozone) → "Unsafe", "Caution", atau "Safe"
+ *  - getCityDecision(unsafeCount) → pesan keputusan kota
  *
  * Tugas:
  * 1. Buat kedua fungsi.
  * 2. Loop setiap sampel. Hitung Safe, Caution, dan Unsafe.
  *    Jangan pakai map, filter, atau reduce.
- * 3. Tampilkan hasil tiap sampel, ketiga jumlah, dan keputusan instalasi.
+ * 3. Tampilkan hasil tiap sampel, ketiga jumlah, dan keputusan kota.
  *
  * Expected output:
  *  S1: Safe
@@ -42,12 +43,12 @@
  *  Safe: 2
  *  Caution: 2
  *  Unsafe: 2
- *  Stop distribution
+ *  Stop outdoor activity
  */
 
 const sampleNames = ["S1", "S2", "S3", "S4", "S5", "S6"];
-const phValues = [7.2, 6.6, 8.7, 7.0, 7.4, 7.1];
-const turbidityValues = [1.0, 2.5, 1.2, 0.8, 3.0, 1.5];
-const bacteriaValues = [0, 0, 0, 1, 0, 0];
+const aqiValues = [72, 95, 160, 70, 85, 60];
+const pm25Values = [20, 40, 30, 20, 36, 15];
+const ozoneValues = [80, 90, 70, 210, 100, 50];
 
-// Tulis kode Anda di bawah ini.
+// Tulis solusi Anda di bawah ini.

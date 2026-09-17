@@ -1,46 +1,45 @@
 /**
- * Easy Case 01 — Skrining Kebugaran Diving
+ * Easy Case 01 — Skrining Magang Lab
  * Points: 100 (Easy)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Toko diving menerima penyelam hanya jika SEMUA aturan berikut terpenuhi:
- *  - Usia 16 sampai 55 (inklusif)
- *  - Sertifikasi sudah berusia minimal 30 hari
- *  - Detak jantung istirahat maksimal 90
- *  - Hari sejak diving terakhir minimal 1
- *  - Penyelam merasa fit hari ini
+ * Lab kampus menerima magang hanya jika SEMUA aturan berikut terpenuhi:
+ *  - IPK minimal 3.0
+ *  - SKS selesai minimal 80
+ *  - Nilai bahasa Inggris minimal 70
+ *  - Sisa bulan magang minimal 2
+ *  - Dosen pembimbing sudah menyetujui
  *
- * Jika layak, pilih jenis tabung:
- *  - Detak jantung 70 atau kurang → "Nitrox"
- *  - Selain itu → "Standard Air"
+ * Jika layak, pilih jalur:
+ *  - IPK 3.5 atau lebih → "Research Track"
+ *  - Selain itu → "Industry Track"
  *
  * Jika tidak layak:
- *  - Jenis tabung adalah "None"
+ *  - Jalur adalah "None"
  *
- * Data penyelam:
- * | Informasi                | Nilai     |
- * | ------------------------ | --------- |
- * | Nama Penyelam            | Rina Sari |
- * | Usia                     | 28        |
- * | Hari Sertifikasi         | 45        |
- * | Detak Jantung Istirahat  | 76        |
- * | Hari Sejak Diving Terakhir | 3       |
- * | Merasa Fit               | Ya        |
+ * Data magang:
+ * | Informasi          | Nilai     |
+ * | ------------------ | --------- |
+ * | Nama Magang        | Nia Putri |
+ * | IPK                | 3.4       |
+ * | SKS                | 92        |
+ * | Nilai Inggris      | 78        |
+ * | Sisa Bulan         | 4         |
+ * | Disetujui Pembimbing | Ya      |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
  * 2. Gabungkan semua aturan kelayakan dengan operator logika.
- * 3. Jika layak, tentukan jenis tabung dengan if...else bersarang.
- * 4. Tampilkan nama penyelam, kelayakan (true/false), jenis tabung, dan
- *    salah satu pesan berikut:
- *    - "Eligible to dive"
- *    - "Not eligible to dive"
+ * 3. Jika layak, tentukan jalur dengan if...else bersarang.
+ * 4. Tampilkan nama, kelayakan (true/false), jalur, dan salah satu pesan:
+ *    - "Eligible for internship"
+ *    - "Not eligible for internship"
  *
  * Expected output:
- *  Diver: Rina Sari
+ *  Intern: Nia Putri
  *  Eligible: true
- *  Tank type: Standard Air
- *  Eligible to dive
+ *  Track: Industry Track
+ *  Eligible for internship
  */
 
 // Tulis solusi Anda di bawah ini.

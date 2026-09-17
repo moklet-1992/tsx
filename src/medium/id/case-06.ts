@@ -1,18 +1,18 @@
 /**
- * Medium Case 06 — Restok SPBU
+ * Medium Case 06 — Restok Linen Hotel
  * Points: 140 (Medium)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * SPBU menyusun rencana restok. Produk di-restok hanya jika stok saat ini
- * di bawah stok minimum.
+ * Laundry hotel menyusun rencana restok. Produk di-restok hanya jika stok
+ * saat ini di bawah stok minimum.
  *
- * | Produk        | Stok | Stok Min | Stok Maks | Harga Satuan |
- * | ------------- | ---- | -------- | --------- | ------------ |
- * | Pertalite     | 800  | 2000     | 8000      | 10000        |
- * | Pertamax      | 3500 | 2500     | 6000      | 14000        |
- * | Dexlite       | 400  | 1500     | 5000      | 15000        |
- * | Pertamina Dex | 5000 | 2000     | 7000      | 16000        |
- * | Biosolar      | 900  | 2200     | 6600      | 9000         |
+ * | Produk  | Stok | Stok Min | Stok Maks | Harga Satuan |
+ * | ------- | ---- | -------- | --------- | ------------ |
+ * | Towel   | 30   | 80       | 200       | 15000        |
+ * | Sheet   | 90   | 80       | 180       | 25000        |
+ * | Pillow  | 20   | 50       | 120       | 40000        |
+ * | Blanket | 200  | 100      | 250       | 60000        |
+ * | Robe    | 15   | 40       | 90        | 35000        |
  *
  * Rumus:
  *  - Qty restok = stok maks - stok saat ini, jika stok < stok min
@@ -35,19 +35,19 @@
  *    total biaya pesanan, dan nama produk dengan biaya tertinggi.
  *
  * Expected output:
- *  Pertalite | qty 7200 | priority true | cost 72000000
- *  Dexlite | qty 4600 | priority true | cost 69000000
- *  Biosolar | qty 5700 | priority true | cost 51300000
+ *  Towel | qty 170 | priority true | cost 2550000
+ *  Pillow | qty 100 | priority true | cost 4000000
+ *  Robe | qty 75 | priority true | cost 2625000
  *  Products restocked: 3
  *  Priority items: 3
- *  Total order cost: 192300000
- *  Highest cost item: Pertalite
+ *  Total order cost: 9175000
+ *  Highest cost item: Pillow
  */
 
-const productNames = ["Pertalite", "Pertamax", "Dexlite", "Pertamina Dex", "Biosolar"];
-const stocks = [800, 3500, 400, 5000, 900];
-const minStocks = [2000, 2500, 1500, 2000, 2200];
-const maxStocks = [8000, 6000, 5000, 7000, 6600];
-const unitPrices = [10000, 14000, 15000, 16000, 9000];
+const productNames = ["Towel", "Sheet", "Pillow", "Blanket", "Robe"];
+const stocks = [30, 90, 20, 200, 15];
+const minStocks = [80, 80, 50, 100, 40];
+const maxStocks = [200, 180, 120, 250, 90];
+const unitPrices = [15000, 25000, 40000, 60000, 35000];
 
 // Tulis solusi Anda di bawah ini.

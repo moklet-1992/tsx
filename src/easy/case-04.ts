@@ -1,48 +1,48 @@
 /**
- * Easy Case 04 — Food Delivery Quote
+ * Easy Case 04 — Event Catering Quote
  * Points: 100 (Easy)
  *
- * A food delivery service first checks coverage, then builds the fee
- * from several parts.
+ * A catering kitchen first checks capacity, then builds the fee from
+ * several parts.
  *
- * Coverage:
- *  - Distance greater than 12 km → status "Out of coverage" and total fee 0
+ * Capacity:
+ *  - Guest count greater than 80 → status "Out of capacity" and total fee 0
  *  - Otherwise → status "Accepted" and calculate the fee below
  *
  * Fee parts when accepted:
- *  - Base fee = 7000
- *  - Distance fee = distance × 2000
- *  - Item fee = item count × 1000
- *  - Rain fee = 3000 if it is raining, otherwise 0
- *  - Peak fee = 8000 if it is peak hour, otherwise 0
- *  - Cutlery fee = 2000 if cutlery is requested, otherwise 0
+ *  - Base fee = 50000
+ *  - Guest fee = guests × 35000
+ *  - Dessert fee = 15000 if dessert is included, otherwise 0
+ *  - Vegetarian fee = 20000 if vegetarian menu, otherwise 0
+ *  - Weekend fee = 40000 if the event is on weekend, otherwise 0
+ *  - Delivery fee = 25000 if delivery is requested, otherwise 0
  *  - Total fee = all parts added together
  *
- * Order information:
- * | Information     | Value       |
- * | --------------- | ----------- |
- * | Customer Name   | Andi Wijaya |
- * | Distance (km)   | 8           |
- * | Item Count      | 5           |
- * | Is Raining      | Yes         |
- * | Is Peak Hour    | Yes         |
- * | Request Cutlery | Yes         |
+ * Event information:
+ * | Information     | Value          |
+ * | --------------- | -------------- |
+ * | Client Name     | Lila Anggraini |
+ * | Guest Count     | 24             |
+ * | Include Dessert | Yes            |
+ * | Vegetarian Menu | Yes            |
+ * | Is Weekend      | Yes            |
+ * | Request Delivery| No             |
  *
  * Tasks:
  * 1. Declare all required variables using the most appropriate data types.
- * 2. Reject the order when it is out of coverage.
+ * 2. Reject the event when it is out of capacity.
  * 3. If accepted, calculate every fee part, then the total.
- * 4. Display the customer name, each fee part, total fee, and status.
+ * 4. Display the client name, each fee part, total fee, and status.
  *
  * Expected output:
- *  Customer: Andi Wijaya
- *  Base fee: 7000
- *  Distance fee: 16000
- *  Item fee: 5000
- *  Rain fee: 3000
- *  Peak fee: 8000
- *  Cutlery fee: 2000
- *  Total fee: 41000
+ *  Client: Lila Anggraini
+ *  Base fee: 50000
+ *  Guest fee: 840000
+ *  Dessert fee: 15000
+ *  Vegetarian fee: 20000
+ *  Weekend fee: 40000
+ *  Delivery fee: 0
+ *  Total fee: 965000
  *  Status: Accepted
  */
 

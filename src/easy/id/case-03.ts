@@ -1,40 +1,40 @@
 /**
- * Easy Case 03 — Prioritas Helpdesk
+ * Easy Case 03 — Prioritas Insiden Gudang
  * Points: 100 (Easy)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Helpdesk menentukan prioritas dan biaya on-site dari tiket.
+ * Gudang menentukan prioritas dan biaya tanggap dari sebuah insiden.
  * Periksa aturan dari atas ke bawah dan pakai kecocokan pertama.
  *
- * | Kondisi                                                         | Prioritas | Biaya  |
- * | --------------------------------------------------------------- | --------- | ------ |
- * | Sistem down, ATAU ada kebocoran keamanan                        | Critical  | 200000 |
- * | Respons yang diminta di bawah 4 jam, ATAU klien VIP             | High      | 120000 |
- * | Kasus lain                                                      | Normal    | 60000  |
+ * | Kondisi                                                    | Prioritas | Biaya  |
+ * | ---------------------------------------------------------- | --------- | ------ |
+ * | Alarm kebakaran menyala, ATAU ada kebocoran bahan kimia    | Hazard    | 250000 |
+ * | Jumlah cedera minimal 1, ATAU mesin berhenti               | Urgent    | 150000 |
+ * | Kasus lain                                                 | Routine   | 50000  |
  *
- * Data tiket:
- * | Informasi                 | Nilai     |
- * | ------------------------- | --------- |
- * | Nama Klien                | Sari Dewi |
- * | Sistem Down               | Tidak     |
- * | Kebocoran Keamanan        | Tidak     |
- * | Jam Respons yang Diminta  | 3         |
- * | Klien VIP                 | Tidak     |
+ * Data insiden:
+ * | Informasi      | Nilai       |
+ * | -------------- | ----------- |
+ * | Nama Pelapor   | Eko Santoso |
+ * | Alarm Kebakaran| Tidak       |
+ * | Kebocoran Kimia| Tidak       |
+ * | Jumlah Cedera  | 1           |
+ * | Mesin Berhenti | Tidak       |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
  * 2. Tentukan prioritas dengan if...else if...else dan operator logika.
- * 3. Setel biaya on-site sesuai prioritas yang cocok.
- * 4. Tampilkan nama klien, prioritas, biaya, dan alasan singkat:
- *    - Critical → "Immediate action required"
- *    - High     → "Needs fast handling"
- *    - Normal   → "Queued for regular support"
+ * 3. Setel biaya tanggap sesuai prioritas yang cocok.
+ * 4. Tampilkan nama pelapor, prioritas, biaya, dan alasan singkat:
+ *    - Hazard  → "Clear the area now"
+ *    - Urgent  → "Dispatch supervisor"
+ *    - Routine → "Log for morning review"
  *
  * Expected output:
- *  Client: Sari Dewi
- *  Priority: High
- *  Fee: 120000
- *  Needs fast handling
+ *  Reporter: Eko Santoso
+ *  Priority: Urgent
+ *  Fee: 150000
+ *  Dispatch supervisor
  */
 
 // Tulis solusi Anda di bawah ini.

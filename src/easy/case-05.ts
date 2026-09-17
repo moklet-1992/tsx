@@ -1,16 +1,15 @@
 /**
- * Easy Case 05 — Phone Warranty Claim
+ * Easy Case 05 — Laptop Insurance Claim
  * Points: 100 (Easy)
  *
- * A service center approves a warranty claim only when ALL of these
- * rules are true:
- *  - The device is at most 12 months old
- *  - The claim amount is greater than the service fee
- *  - If the claim is water damage, waterproof proof must exist
- *    (non-water claims do not need waterproof proof)
+ * An insurer approves a laptop claim only when ALL of these rules are true:
+ *  - The policy has been active for at least 2 months
+ *  - The claim amount is greater than the excess fee
+ *  - If the laptop is lost, a police report must exist
+ *    (broken-device claims do not need a police report)
  *
  * If approved:
- *  - Payout = claim amount - service fee
+ *  - Payout = claim amount - excess fee
  *  - Status = "Approved"
  *
  * If rejected:
@@ -20,23 +19,23 @@
  * Claim information:
  * | Information       | Value        |
  * | ----------------- | ------------ |
- * | Customer Name     | Maya Kartika |
- * | Device Age Months | 8            |
- * | Claim Amount      | 1500000      |
- * | Service Fee       | 250000       |
- * | Is Water Damage   | Yes          |
- * | Has Waterproof Proof | Yes       |
+ * | Owner Name        | Yoga Pratama |
+ * | Policy Months     | 6            |
+ * | Claim Amount      | 4500000      |
+ * | Excess Fee        | 500000       |
+ * | Is Lost           | Yes          |
+ * | Has Police Report | Yes          |
  *
  * Tasks:
  * 1. Declare all required variables using the most appropriate data types.
- * 2. Write the water-damage rule so it is required only for water damage.
- *    Hint: !isWaterDamage || hasWaterproofProof
+ * 2. Write the lost-item rule so it is required only when the laptop is lost.
+ *    Hint: !isLost || hasPoliceReport
  * 3. Combine every approval rule with logical operators.
- * 4. Calculate the payout and display the customer name, payout, and status.
+ * 4. Calculate the payout and display the owner name, payout, and status.
  *
  * Expected output:
- *  Customer: Maya Kartika
- *  Payout: 1250000
+ *  Owner: Yoga Pratama
+ *  Payout: 4000000
  *  Status: Approved
  */
 

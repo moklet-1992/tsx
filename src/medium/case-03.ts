@@ -1,53 +1,53 @@
 /**
- * Medium Case 03 — Vaccine Cold-Chain Watch
+ * Medium Case 03 — Dairy Expiry Watch
  * Points: 140 (Medium)
  *
- * A clinic checks vaccine batches against today's day number (1–365).
- * Today is day 15.
+ * A grocery store checks dairy batches against today's day number (1–365).
+ * Today is day 40.
  *
  * | Batch Name | Expiry Day |
  * | ---------- | ---------- |
- * | FluA       | 10         |
- * | CovidB     | 17         |
- * | Tetanus    | 14         |
- * | HepB       | 40         |
- * | MMR        | 15         |
+ * | FreshA     | 35         |
+ * | YogurtB    | 42         |
+ * | CheeseC    | 39         |
+ * | ButterD    | 70         |
+ * | MilkE      | 40         |
  *
  * Days left = expiry day - today.
  *
  * Status (check from top to bottom):
  *  - Days left < 0  → "Expired"
- *  - Days left <= 2 → "Warning"
+ *  - Days left <= 3 → "Warning"
  *  - Otherwise      → "Safe"
  *
- * If at least one batch is expired, the clinic status is "Cold chain hold".
- * Otherwise the clinic status is "Stock is clear".
+ * If at least one batch is expired, the store status is "Recall required".
+ * Otherwise the store status is "Stock is clear".
  *
  * Required functions:
  *  - daysLeft(expiryDay, today) → expiry day minus today
  *  - getBatchStatus(days) → "Expired", "Warning", or "Safe"
- *  - getClinicStatus(expiredCount) → the clinic status message
+ *  - getStoreStatus(expiredCount) → the store status message
  *
  * Tasks:
  * 1. Create the three functions.
  * 2. Loop every batch. Count Expired, Warning, and Safe.
  *    Do not use map, filter, or reduce.
- * 3. Display each batch name with its status, the three counts, and clinic status.
+ * 3. Display each batch name with its status, the three counts, and store status.
  *
  * Expected output:
- *  FluA: Expired
- *  CovidB: Warning
- *  Tetanus: Expired
- *  HepB: Safe
- *  MMR: Warning
+ *  FreshA: Expired
+ *  YogurtB: Warning
+ *  CheeseC: Expired
+ *  ButterD: Safe
+ *  MilkE: Warning
  *  Expired: 2
  *  Warning: 2
  *  Safe: 1
- *  Cold chain hold
+ *  Recall required
  */
 
-const batchNames = ["FluA", "CovidB", "Tetanus", "HepB", "MMR"];
-const expiryDays = [10, 17, 14, 40, 15];
-const today = 15;
+const batchNames = ["FreshA", "YogurtB", "CheeseC", "ButterD", "MilkE"];
+const expiryDays = [35, 42, 39, 70, 40];
+const today = 40;
 
 // Write your solution below.

@@ -1,38 +1,38 @@
 /**
- * Medium Case 04 — Ferry Boarding
+ * Medium Case 04 — Coworking Parking
  * Points: 140 (Medium)
  *
- * A ferry has 12 vehicle slots. true means occupied, false means empty.
- * A group of 4 vehicles wants to board.
+ * A coworking lot has 12 parking spots. true means occupied, false means empty.
+ * A group of 5 cars wants to park.
  *
- * Slot map (slot 1 to slot 12):
- * [true, true, false, true, false, false, true, false, true, true, false, false]
+ * Spot map (spot 1 to spot 12):
+ * [false, true, true, false, true, false, false, true, true, false, true, false]
  *
  * Required functions:
- *  - countEmpty(slots) → how many slots are empty (use a loop)
- *  - findFirstEmptySlot(slots) → the first empty slot number (1-based).
- *    Return 0 when no slot is empty.
- *  - canBoard(emptyCount, vehicleCount) → true when emptyCount >= vehicleCount
+ *  - countEmpty(spots) → how many spots are empty (use a loop)
+ *  - findFirstEmptySpot(spots) → the first empty spot number (1-based).
+ *    Return 0 when no spot is empty.
+ *  - canPark(emptyCount, carCount) → true when emptyCount >= carCount
  *
- * Ferry message:
+ * Lot message:
  *  - empty === 0              → "Sold out"
- *  - empty > 0 and empty < 4  → "Almost full"
- *  - empty >= 4               → "Slots available"
+ *  - empty > 0 and empty < 5  → "Almost full"
+ *  - empty >= 5               → "Spots available"
  *
  * Tasks:
  * 1. Create the three functions.
- * 2. Loop the slot map. Do not use map, filter, indexOf, or find.
- * 3. Display empty slots, first empty slot number, whether the group can board,
- *    and the ferry message.
+ * 2. Loop the spot map. Do not use map, filter, indexOf, or find.
+ * 3. Display empty spots, first empty spot number, whether the group can park,
+ *    and the lot message.
  *
  * Expected output:
- *  Empty slots: 6
- *  First empty slot: 3
- *  Can board: true
- *  Slots available
+ *  Empty spots: 6
+ *  First empty spot: 1
+ *  Can park: true
+ *  Spots available
  */
 
-const slots = [true, true, false, true, false, false, true, false, true, true, false, false];
-const vehicleCount = 4;
+const spots = [false, true, true, false, true, false, false, true, true, false, true, false];
+const carCount = 5;
 
 // Write your solution below.

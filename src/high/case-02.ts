@@ -1,38 +1,38 @@
 /**
- * High Case 02 — Museum Pass (OOP)
+ * High Case 02 — Workshop Badge (OOP)
  * Points: 160 (High — OOP)
  *
- * A museum pass is one object. Create several passes, store them in
+ * A workshop badge is one object. Create several badges, store them in
  * an array, and change state through class methods. Do not create a
  * gate class, and do not pass an array into a constructor.
  *
- * Pass data:
- * | Code | Category | Price  | Already Used |
+ * Badge data:
+ * | Code | Track    | Price  | Already Used |
  * | ---- | -------- | ------ | ------------ |
- * | M1   | regular  | 80000  | No           |
- * | M2   | vip      | 200000 | No           |
- * | M3   | regular  | 80000  | Yes          |
- * | M4   | vip      | 200000 | No           |
+ * | W1   | frontend | 120000 | No           |
+ * | W2   | backend  | 150000 | No           |
+ * | W3   | frontend | 120000 | Yes          |
+ * | W4   | backend  | 150000 | No           |
  *
- * Required class Pass (one object):
- *  - Properties: code, category, price, isUsed
+ * Required class Badge (one object):
+ *  - Properties: code, track, price, isUsed
  *  - getStatus() → "Used" when isUsed is true, otherwise "Valid"
  *  - markUsed() → sets isUsed to true
- *  - canEnter() → true only when the pass is not used
- *  - getRefund() → 0 when used, otherwise 40% of price
+ *  - canEnter() → true only when the badge is not used
+ *  - getRefund() → 0 when used, otherwise 30% of price
  *
  * Tasks:
- * 1. Create only the Pass class.
- * 2. Create four Pass objects with new Pass(...).
- * 3. Put them into an array: const passes = [passM1, passM2, passM3, passM4]
- * 4. Call markUsed() on M1.
- * 5. Display code, status, canEnter, and refund for every pass.
+ * 1. Create only the Badge class.
+ * 2. Create four Badge objects with new Badge(...).
+ * 3. Put them into an array: const badges = [badgeW1, badgeW2, badgeW3, badgeW4]
+ * 4. Call markUsed() on W1.
+ * 5. Display code, status, canEnter, and refund for every badge.
  *
  * Expected output:
- *  M1 | Used | enter false | refund 0
- *  M2 | Valid | enter true | refund 80000
- *  M3 | Used | enter false | refund 0
- *  M4 | Valid | enter true | refund 80000
+ *  W1 | Used | enter false | refund 0
+ *  W2 | Valid | enter true | refund 45000
+ *  W3 | Used | enter false | refund 0
+ *  W4 | Valid | enter true | refund 45000
  */
 
 // Write your solution below.

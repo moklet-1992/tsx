@@ -1,54 +1,54 @@
 /**
- * High Case 03 — Kru Pengiriman (OOP)
+ * High Case 03 — Kru Radio (OOP)
  * Points: 160 (High — OOP)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Rider dan dispatcher adalah objek berbeda yang berbagi class induk.
+ * Host dan engineer adalah objek berbeda yang berbagi class induk.
  * Buat setiap orang dengan new, lalu simpan dalam satu array. Jangan
  * membuat class roster/manager, dan jangan memasukkan array ke constructor.
  *
  * Data kru:
- * | Nama  | Peran      | Jam | Tambahan          |
- * | ----- | ---------- | --- | ----------------- |
- * | Maya  | Rider      | 36  | 10 drop malam     |
- * | Raka  | Rider      | 30  | 0 drop malam      |
- * | Lina  | Dispatcher | 20  | Tugas akhir pekan |
- * | Budi  | Dispatcher | 18  | Bukan akhir pekan |
- * | Sinta | Rider      | 40  | 8 drop malam      |
+ * | Nama  | Peran    | Jam | Tambahan       |
+ * | ----- | -------- | --- | -------------- |
+ * | Maya  | Host     | 28  | 6 jam siaran   |
+ * | Raka  | Host     | 24  | 0 jam siaran   |
+ * | Lina  | Engineer | 16  | Shift malam    |
+ * | Budi  | Engineer | 20  | Bukan malam    |
+ * | Sinta | Host     | 32  | 4 jam siaran   |
  *
  * Aturan gaji:
- *  - StaffMember.getPay() → jam × 40000
- *  - Rider.getPay()       → jam × 40000 + dropMalam × 15000
- *  - Dispatcher.getPay()  → jam × 70000 + 250000 jika tugas akhir pekan
+ *  - StaffMember.getPay() → jam × 35000
+ *  - Host.getPay()        → jam × 35000 + jamSiaran × 20000
+ *  - Engineer.getPay()    → jam × 55000 + 180000 jika shift malam
  *
  * Class wajib StaffMember (satu orang):
  *  - Properti: name, hours
  *  - getRole() → "Staff"
- *  - getPay() → jam × 40000
+ *  - getPay() → jam × 35000
  *
- * Class wajib Rider extends StaffMember:
- *  - Properti tambahan: nightDrops
- *  - getRole() → "Rider"
+ * Class wajib Host extends StaffMember:
+ *  - Properti tambahan: liveHours
+ *  - getRole() → "Host"
  *  - Override getPay()
  *
- * Class wajib Dispatcher extends StaffMember:
- *  - Properti tambahan: isWeekend
- *  - getRole() → "Dispatcher"
+ * Class wajib Engineer extends StaffMember:
+ *  - Properti tambahan: isNight
+ *  - getRole() → "Engineer"
  *  - Override getPay()
  *
  * Tugas:
  * 1. Buat ketiga class. Jangan membuat class koleksi keempat.
- * 2. Buat setiap kru dengan new Rider(...) atau new Dispatcher(...).
+ * 2. Buat setiap kru dengan new Host(...) atau new Engineer(...).
  * 3. Masukkan ke array:
  *    const crew = [maya, raka, lina, budi, sinta]
  * 4. Tampilkan peran, nama, dan gaji setiap orang (loop for...of diperbolehkan).
  *
  * Expected output:
- *  Rider Maya: 1590000
- *  Rider Raka: 1200000
- *  Dispatcher Lina: 1650000
- *  Dispatcher Budi: 1260000
- *  Rider Sinta: 1720000
+ *  Host Maya: 1100000
+ *  Host Raka: 840000
+ *  Engineer Lina: 1060000
+ *  Engineer Budi: 1100000
+ *  Host Sinta: 1200000
  */
 
 // Tulis solusi Anda di bawah ini.

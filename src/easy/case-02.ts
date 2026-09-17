@@ -1,49 +1,48 @@
 /**
- * Easy Case 02 — Campus Gate Pass
+ * Easy Case 02 — Library Print Quota
  * Points: 100 (Easy)
  *
- * The campus gate must check a visitor in this exact order and stop at
+ * The library printer must check a job in this exact order and stop at
  * the first failed rule:
- *  1. Visit hours must be greater than 0
- *  2. Hours already used today + this visit must not exceed the daily max
- *  3. Visit cost + vehicle fee must not exceed prepaid credit
+ *  1. Page count must be greater than 0
+ *  2. Pages already printed today + this job must not exceed the daily limit
+ *  3. Job cost + color fee must not exceed remaining quota
  *
- * Vehicle fee:
- *  - Has a car → Rp5,000
- *  - No car    → Rp0
+ * Color fee:
+ *  - Color print → Rp2,000
+ *  - Black and white → Rp0
  *
- * Visit cost = visit hours × hourly rate
+ * Job cost = pages × 200
  *
- * If the visit is accepted:
- *  - Remaining credit = prepaid credit - visit cost - vehicle fee
+ * If the job is accepted:
+ *  - Remaining quota = current quota - job cost - color fee
  *  - Status = "Success"
  *
- * If the visit is rejected:
- *  - Remaining credit stays the same as prepaid credit
- *  - Status is one of: "Invalid hours", "Daily hours exceeded",
- *    or "Insufficient credit"
+ * If the job is rejected:
+ *  - Remaining quota stays the same
+ *  - Status is one of: "Invalid pages", "Daily page limit exceeded",
+ *    or "Insufficient quota"
  *
- * Visitor information:
- * | Information          | Value        |
- * | -------------------- | ------------ |
- * | Visitor Name         | Doni Pratama |
- * | Prepaid Credit       | 80000        |
- * | Visit Hours          | 4            |
- * | Hours Used Today     | 3            |
- * | Daily Max Hours      | 8            |
- * | Hourly Rate          | 10000        |
- * | Has Car              | Yes          |
+ * Job information:
+ * | Information          | Value      |
+ * | -------------------- | ---------- |
+ * | Student Name         | Bima Sakti |
+ * | Remaining Quota      | 25000      |
+ * | Pages                | 40         |
+ * | Pages Printed Today  | 30         |
+ * | Daily Page Limit     | 80         |
+ * | Color Print          | Yes        |
  *
  * Tasks:
  * 1. Declare all required variables using the most appropriate data types.
- * 2. Determine the vehicle fee using if...else.
- * 3. Validate the visit in the required order using if...else if...else.
- * 4. Display the visitor name, vehicle fee, remaining credit, and status.
+ * 2. Determine the color fee using if...else.
+ * 3. Validate the job in the required order using if...else if...else.
+ * 4. Display the student name, color fee, remaining quota, and status.
  *
  * Expected output:
- *  Visitor: Doni Pratama
- *  Vehicle fee: 5000
- *  Remaining credit: 35000
+ *  Student: Bima Sakti
+ *  Color fee: 2000
+ *  Remaining quota: 15000
  *  Status: Success
  */
 

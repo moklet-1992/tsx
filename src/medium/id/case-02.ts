@@ -1,48 +1,46 @@
 /**
- * Medium Case 02 — Shift Dermaga Pelabuhan
+ * Medium Case 02 — Shift Gerbang Stadion
  * Points: 140 (Medium)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Pelabuhan memungut tarif menurut jenis kapal. Shift ini ada peringatan
- * badai, jadi biaya badai ditambahkan setelah semua kapal dihitung.
+ * Gerbang stadion memungut tarif menurut jenis tiket. Shift ini hujan,
+ * jadi biaya hujan ditambahkan setelah semua tiket dihitung.
  *
- * Jenis kapal shift ini:
- * ["ferry", "cargo", "ferry", "yacht", "speedboat", "cargo", "ferry", "cargo"]
+ * Jenis tiket shift ini:
+ * ["regular", "vip", "regular", "student", "regular", "vip", "student", "regular"]
  *
  * Tarif dasar:
- * | Jenis     | Tarif |
- * | --------- | ----- |
- * | speedboat | 4000  |
- * | ferry     | 12000 |
- * | yacht     | 20000 |
- * | cargo     | 25000 |
- * | lainnya   | 0     |
+ * | Jenis   | Tarif |
+ * | ------- | ----- |
+ * | student | 15000 |
+ * | regular | 25000 |
+ * | vip     | 75000 |
+ * | lainnya | 0     |
  *
- * Biaya badai = 20% dari total tarif dasar.
- * Setoran akhir = total tarif dasar + biaya badai.
+ * Biaya hujan = 10% dari total tarif dasar.
+ * Setoran akhir = total tarif dasar + biaya hujan.
  *
  * Fungsi yang wajib:
- *  - getBaseFee(vesselType) → tarif untuk jenis itu
- *  - getStormSurcharge(totalBaseFee, isStorm) → 20% jika isStorm true, selain itu 0
+ *  - getBaseFee(ticketType) → tarif untuk jenis itu
+ *  - getRainSurcharge(totalBaseFee, isRain) → 10% jika isRain true, selain itu 0
  *
  * Tugas:
  * 1. Buat kedua fungsi.
- * 2. Loop kapal. Hitung jumlah tiap jenis dan jumlahkan tarif dasar.
+ * 2. Loop tiket. Hitung jumlah tiap jenis dan jumlahkan tarif dasar.
  *    Jangan pakai map, filter, atau reduce.
- * 3. Terapkan biaya badai karena ini shift badai.
- * 4. Tampilkan jumlah tiap jenis, total tarif dasar, biaya badai, dan setoran akhir.
+ * 3. Terapkan biaya hujan karena ini shift hujan.
+ * 4. Tampilkan jumlah tiap jenis, total tarif dasar, biaya hujan, dan setoran akhir.
  *
  * Expected output:
- *  Speedboat: 1
- *  Ferry: 3
- *  Yacht: 1
- *  Cargo: 3
- *  Total base fee: 135000
- *  Storm surcharge: 27000
- *  Final collection: 162000
+ *  Student: 2
+ *  Regular: 4
+ *  VIP: 2
+ *  Total base fee: 280000
+ *  Rain surcharge: 28000
+ *  Final collection: 308000
  */
 
-const vesselTypes = ["ferry", "cargo", "ferry", "yacht", "speedboat", "cargo", "ferry", "cargo"];
-const isStormShift = true;
+const ticketTypes = ["regular", "vip", "regular", "student", "regular", "vip", "student", "regular"];
+const isRainShift = true;
 
 // Tulis solusi Anda di bawah ini.

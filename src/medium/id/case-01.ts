@@ -1,36 +1,35 @@
 /**
- * Medium Case 01 — Pantau Banjir Sungai
+ * Medium Case 01 — Pantau CPU Server
  * Points: 140 (Medium)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Pos sungai mencatat tinggi air setiap jam. Satu jam menjadi alert jika
- * tinggi air lebih dari 150. Jika ada 3 jam alert atau lebih, kota perlu
- * siaga evakuasi.
+ * Data center mencatat beban CPU setiap jam. Satu jam menjadi alert jika
+ * beban lebih dari 80. Jika ada 3 jam alert atau lebih, cluster perlu scale out.
  *
- * Tinggi air per jam:
- * [120, 135, 148, 162, 140, 171, 155, 130, 168, 125]
+ * Beban CPU per jam:
+ * [42, 55, 71, 88, 64, 91, 77, 50, 86, 48]
  *
  * Fungsi yang wajib:
- *  - isAlert(level) → true jika level > 150
- *  - countAlerts(levels) → berapa jam yang alert (pakai loop)
- *  - findHighest(levels) → tinggi air tertinggi (pakai loop)
+ *  - isAlert(load) → true jika load > 80
+ *  - countAlerts(loads) → berapa jam yang alert (pakai loop)
+ *  - findHighest(loads) → beban CPU tertinggi (pakai loop)
  *
- * Status kota:
- *  - Jam alert >= 3 → "Evacuate standby"
- *  - Selain itu     → "Normal watch"
+ * Status cluster:
+ *  - Jam alert >= 3 → "Scale out required"
+ *  - Selain itu     → "Stable load"
  *
  * Tugas:
  * 1. Buat ketiga fungsi di atas.
- * 2. Loop data tinggi air. Jangan pakai map, filter, atau reduce.
- * 3. Tampilkan total jam, jam alert, tinggi tertinggi, dan status kota.
+ * 2. Loop data beban CPU. Jangan pakai map, filter, atau reduce.
+ * 3. Tampilkan total jam, jam alert, beban tertinggi, dan status cluster.
  *
  * Expected output:
  *  Total hours: 10
- *  Alert hours: 4
- *  Highest level: 171
- *  Evacuate standby
+ *  Alert hours: 3
+ *  Highest load: 91
+ *  Scale out required
  */
 
-const waterLevels = [120, 135, 148, 162, 140, 171, 155, 130, 168, 125];
+const cpuLoads = [42, 55, 71, 88, 64, 91, 77, 50, 86, 48];
 
 // Tulis solusi Anda di bawah ini.

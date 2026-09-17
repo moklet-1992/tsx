@@ -1,17 +1,17 @@
 /**
- * Medium Case 06 — Fuel Station Restock
+ * Medium Case 06 — Hotel Linen Restock
  * Points: 140 (Medium)
  *
- * A fuel station builds a restock plan. A product is restocked only when
+ * A hotel laundry builds a restock plan. A product is restocked only when
  * current stock is below the minimum stock.
  *
- * | Product       | Stock | Min Stock | Max Stock | Unit Price |
- * | ------------- | ----- | --------- | --------- | ---------- |
- * | Pertalite     | 800   | 2000      | 8000      | 10000      |
- * | Pertamax      | 3500  | 2500      | 6000      | 14000      |
- * | Dexlite       | 400   | 1500      | 5000      | 15000      |
- * | Pertamina Dex | 5000  | 2000      | 7000      | 16000      |
- * | Biosolar      | 900   | 2200      | 6600      | 9000       |
+ * | Product | Stock | Min Stock | Max Stock | Unit Price |
+ * | ------- | ----- | --------- | --------- | ---------- |
+ * | Towel   | 30    | 80        | 200       | 15000      |
+ * | Sheet   | 90    | 80        | 180       | 25000      |
+ * | Pillow  | 20    | 50        | 120       | 40000      |
+ * | Blanket | 200   | 100       | 250       | 60000      |
+ * | Robe    | 15    | 40        | 90        | 35000      |
  *
  * Formulas:
  *  - Reorder qty = max stock - current stock, when stock < min stock
@@ -34,19 +34,19 @@
  *    the total order cost, and the product name with the highest order cost.
  *
  * Expected output:
- *  Pertalite | qty 7200 | priority true | cost 72000000
- *  Dexlite | qty 4600 | priority true | cost 69000000
- *  Biosolar | qty 5700 | priority true | cost 51300000
+ *  Towel | qty 170 | priority true | cost 2550000
+ *  Pillow | qty 100 | priority true | cost 4000000
+ *  Robe | qty 75 | priority true | cost 2625000
  *  Products restocked: 3
  *  Priority items: 3
- *  Total order cost: 192300000
- *  Highest cost item: Pertalite
+ *  Total order cost: 9175000
+ *  Highest cost item: Pillow
  */
 
-const productNames = ["Pertalite", "Pertamax", "Dexlite", "Pertamina Dex", "Biosolar"];
-const stocks = [800, 3500, 400, 5000, 900];
-const minStocks = [2000, 2500, 1500, 2000, 2200];
-const maxStocks = [8000, 6000, 5000, 7000, 6600];
-const unitPrices = [10000, 14000, 15000, 16000, 9000];
+const productNames = ["Towel", "Sheet", "Pillow", "Blanket", "Robe"];
+const stocks = [30, 90, 20, 200, 15];
+const minStocks = [80, 80, 50, 100, 40];
+const maxStocks = [200, 180, 120, 250, 90];
+const unitPrices = [15000, 25000, 40000, 60000, 35000];
 
 // Write your solution below.

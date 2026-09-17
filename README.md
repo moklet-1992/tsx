@@ -77,12 +77,12 @@ Six case studies. Each one combines **data types**, **operators**, and **conditi
 
 | File | Case | Skills | Points |
 |------|------|--------|--------|
-| `src/easy/case-01.ts` | Dive Fitness Screening | many `&&` rules + nested tank type | 100 |
-| `src/easy/case-02.ts` | Campus Gate Pass | ordered validation + vehicle fee | 100 |
-| `src/easy/case-03.ts` | Helpdesk Priority | first-match `||` bands + fee | 100 |
-| `src/easy/case-04.ts` | Food Delivery Quote | coverage gate + several fee parts | 100 |
-| `src/easy/case-05.ts` | Phone Warranty Claim | conditional water-damage rule + payout | 100 |
-| `src/easy/case-06.ts` | Apartment Rent Pre-Check | ratio formulas + combined screening | 100 |
+| `src/easy/case-01.ts` | Lab Internship Screening | many `&&` rules + nested track | 100 |
+| `src/easy/case-02.ts` | Library Print Quota | ordered validation + color fee | 100 |
+| `src/easy/case-03.ts` | Warehouse Incident Priority | first-match `||` bands + fee | 100 |
+| `src/easy/case-04.ts` | Event Catering Quote | capacity gate + several fee parts | 100 |
+| `src/easy/case-05.ts` | Laptop Insurance Claim | conditional lost-item rule + payout | 100 |
+| `src/easy/case-06.ts` | Side-Hustle Loan Pre-Check | ratio formulas + combined screening | 100 |
 
 Mark each Easy case out of **100**: data types 30, operators/formulas 30, conditions 30, expected output 10. Easy level cap: **250**.
 
@@ -101,12 +101,12 @@ Six case studies. Each one combines **conditions**, **looping**, and **functions
 
 | File | Case | Skills | Points |
 |------|------|--------|--------|
-| `src/medium/case-01.ts` | River Flood Watch | alert helper + loop counts | 140 |
-| `src/medium/case-02.ts` | Harbor Dock Shift | fee function + type counts + surcharge | 140 |
-| `src/medium/case-03.ts` | Vaccine Cold-Chain Watch | days-left status + hold | 140 |
-| `src/medium/case-04.ts` | Ferry Boarding | empty-slot search + boarding check | 140 |
-| `src/medium/case-05.ts` | Air Quality Samples | first-match classify + city decision | 140 |
-| `src/medium/case-06.ts` | Fuel Station Restock | four functions + skip + highest cost | 140 |
+| `src/medium/case-01.ts` | Server CPU Watch | alert helper + loop counts | 140 |
+| `src/medium/case-02.ts` | Stadium Gate Shift | fee function + type counts + surcharge | 140 |
+| `src/medium/case-03.ts` | Dairy Expiry Watch | days-left status + recall | 140 |
+| `src/medium/case-04.ts` | Coworking Parking | empty-spot search + parking check | 140 |
+| `src/medium/case-05.ts` | Soil Quality Samples | first-match classify + farm decision | 140 |
+| `src/medium/case-06.ts` | Hotel Linen Restock | four functions + skip + highest cost | 140 |
 
 Mark each Medium case out of **140**: functions 50, looping 40, conditions 35, expected output 15. Medium level cap: **350**.
 
@@ -125,21 +125,21 @@ Six case studies, split into two tracks. **Do not mix them.**
 **OOP (cases 01–03).** A class models **one object**. Create each instance with `new`, then put those objects into an array yourself. Do **not** pass an array into a constructor, and do not create a manager/board/roster class.
 
 ```ts
-const locker1 = new Locker("L01", 1, false, 80000);
-const locker2 = new Locker("L02", 1, true, 80000);
-const lockers = [locker1, locker2];
+const bike1 = new Bike("B01", 1, true, 8000);
+const bike2 = new Bike("B02", 1, false, 8000);
+const bikes = [bike1, bike2];
 ```
 
 **Array methods (cases 04–06).** No classes. Work on the given object list with `map`, `filter`, `reduce`, `find`, `some`, and `every`. Do not use a `for` loop.
 
 | File | Track | Case | Skills | Points |
 |------|-------|------|--------|--------|
-| `src/high/case-01.ts` | OOP | Gym Locker | one class, `new`, array of instances | 160 |
-| `src/high/case-02.ts` | OOP | Museum Pass | methods that change state | 160 |
-| `src/high/case-03.ts` | OOP | Delivery Crew | inheritance + `getPay()` | 160 |
-| `src/high/case-04.ts` | Array | Language Course Report | filter, map, reduce, find | 160 |
-| `src/high/case-05.ts` | Array | Lost Baggage Report | filter, map, reduce, some, every | 160 |
-| `src/high/case-06.ts` | Array | Meeting Room Report | filter, map, reduce, every | 160 |
+| `src/high/case-01.ts` | OOP | Bike Share | one class, `new`, array of instances | 160 |
+| `src/high/case-02.ts` | OOP | Workshop Badge | methods that change state | 160 |
+| `src/high/case-03.ts` | OOP | Radio Station Crew | inheritance + `getPay()` | 160 |
+| `src/high/case-04.ts` | Array | Photo Studio Report | filter, map, reduce, find | 160 |
+| `src/high/case-05.ts` | Array | Repair Ticket Report | filter, map, reduce, some, every | 160 |
+| `src/high/case-06.ts` | Array | Photo Studio Booking Report | filter, map, reduce, every | 160 |
 
 Mark each High case out of **160**.  
 OOP: class design 80, methods 50, instances 15, output 15.  

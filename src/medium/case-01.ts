@@ -1,35 +1,35 @@
 /**
- * Medium Case 01 — River Flood Watch
+ * Medium Case 01 — Server CPU Watch
  * Points: 140 (Medium)
  *
- * A river station records the water level every hour. An hour is an alert
- * when the level is greater than 150. If there are 3 or more alert hours,
- * the town needs evacuate standby.
+ * A data center records CPU load every hour. An hour is an alert when
+ * the load is greater than 80. If there are 3 or more alert hours,
+ * the cluster needs to scale out.
  *
- * Hourly water levels:
- * [120, 135, 148, 162, 140, 171, 155, 130, 168, 125]
+ * Hourly CPU loads:
+ * [42, 55, 71, 88, 64, 91, 77, 50, 86, 48]
  *
  * Required functions:
- *  - isAlert(level) → true when level > 150
- *  - countAlerts(levels) → how many hours are alerts (use a loop)
- *  - findHighest(levels) → the highest water level (use a loop)
+ *  - isAlert(load) → true when load > 80
+ *  - countAlerts(loads) → how many hours are alerts (use a loop)
+ *  - findHighest(loads) → the highest CPU load (use a loop)
  *
- * Town status:
- *  - Alert hours >= 3 → "Evacuate standby"
- *  - Otherwise        → "Normal watch"
+ * Cluster status:
+ *  - Alert hours >= 3 → "Scale out required"
+ *  - Otherwise        → "Stable load"
  *
  * Tasks:
  * 1. Create the three functions above.
- * 2. Loop the water levels. Do not use map, filter, or reduce.
- * 3. Display total hours, alert hours, highest level, and town status.
+ * 2. Loop the CPU loads. Do not use map, filter, or reduce.
+ * 3. Display total hours, alert hours, highest load, and cluster status.
  *
  * Expected output:
  *  Total hours: 10
- *  Alert hours: 4
- *  Highest level: 171
- *  Evacuate standby
+ *  Alert hours: 3
+ *  Highest load: 91
+ *  Scale out required
  */
 
-const waterLevels = [120, 135, 148, 162, 140, 171, 155, 130, 168, 125];
+const cpuLoads = [42, 55, 71, 88, 64, 91, 77, 50, 86, 48];
 
 // Write your solution below.

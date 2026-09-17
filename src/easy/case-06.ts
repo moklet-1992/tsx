@@ -1,42 +1,43 @@
 /**
- * Easy Case 06 — Apartment Rent Pre-Check
+ * Easy Case 06 — Side-Hustle Loan Pre-Check
  * Points: 100 (Easy)
  *
- * A rental office runs a first screening. The application is pre-approved
- * only when ALL of these rules are true:
- *  - Age is from 21 to 50 (inclusive)
- *  - Work experience is at least 6 months
- *  - Requested rent is not greater than the maximum rent
- *  - Rent ratio is not greater than 0.3
+ * A micro-finance office runs a first screening. The application is
+ * pre-approved only when ALL of these rules are true:
+ *  - Age is from 20 to 45 (inclusive)
+ *  - Business age is at least 8 months
+ *  - Requested loan is not greater than the maximum loan
+ *  - Installment ratio is not greater than 0.25
  *
  * Formulas:
- *  - Maximum rent = monthly income × 0.3
- *  - Deposit = requested rent × 2
- *  - Rent ratio = requested rent / monthly income
+ *  - Maximum loan = monthly revenue × 3
+ *  - New installment = requested loan × 0.05
+ *  - Installment ratio = (existing installment + new installment) / monthly revenue
  *
  * Applicant information:
- * | Information      | Value         |
- * | ---------------- | ------------- |
- * | Applicant Name   | Fajar Hidayat |
- * | Age              | 26            |
- * | Work Months      | 14            |
- * | Monthly Income   | 8000000       |
- * | Requested Rent   | 2200000       |
+ * | Information          | Value      |
+ * | -------------------- | ---------- |
+ * | Applicant Name       | Wulan Sari |
+ * | Age                  | 29         |
+ * | Business Months      | 11         |
+ * | Monthly Revenue      | 10000000   |
+ * | Existing Installment | 1200000    |
+ * | Requested Loan       | 18000000   |
  *
  * Tasks:
  * 1. Declare all required variables using the most appropriate data types.
- * 2. Calculate maximum rent, deposit, and rent ratio.
+ * 2. Calculate maximum loan, new installment, and installment ratio.
  * 3. Combine every screening rule with logical operators.
- * 4. Display the applicant name, maximum rent, deposit, rent ratio,
- *    and one of these messages:
+ * 4. Display the applicant name, maximum loan, new installment,
+ *    installment ratio, and one of these messages:
  *    - "Pre-approved"
  *    - "Rejected"
  *
  * Expected output:
- *  Applicant: Fajar Hidayat
- *  Maximum rent: 2400000
- *  Deposit: 4400000
- *  Rent ratio: 0.275
+ *  Applicant: Wulan Sari
+ *  Maximum loan: 30000000
+ *  New installment: 900000
+ *  Installment ratio: 0.21
  *  Pre-approved
  */
 

@@ -1,37 +1,37 @@
 /**
- * Medium Case 05 — Sampel Kualitas Udara
+ * Medium Case 05 — Sampel Kualitas Tanah
  * Points: 140 (Medium)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Lab kota menguji 6 sampel udara. Klasifikasikan setiap sampel dari atas
- * ke bawah dan pakai aturan yang pertama kali cocok.
+ * Lab pertanian menguji 6 sampel tanah. Klasifikasikan setiap sampel dari
+ * atas ke bawah dan pakai aturan yang pertama kali cocok.
  *
- *  1. "Unsafe"  jika AQI > 150 ATAU pm25 > 75 ATAU ozone > 200
- *  2. "Caution" jika AQI > 80 ATAU pm25 > 35
+ *  1. "Unsafe"  jika pH < 5.0 ATAU pH > 8.5 ATAU metal > 10
+ *  2. "Caution" jika pH < 6.0 ATAU pH > 7.8 ATAU metal > 4
  *  3. "Safe"    jika tidak termasuk di atas
  *
- * Keputusan kota:
- *  - Minimal satu sampel Unsafe → "Stop outdoor activity"
- *  - Selain itu                 → "Outdoor activity allowed"
+ * Keputusan kebun:
+ *  - Minimal satu sampel Unsafe → "Stop planting"
+ *  - Selain itu                 → "Planting allowed"
  *
- * | Sampel | AQI | PM2.5 | Ozone |
- * | ------ | --- | ----- | ----- |
- * | S1     | 72  | 20    | 80    |
- * | S2     | 95  | 40    | 90    |
- * | S3     | 160 | 30    | 70    |
- * | S4     | 70  | 20    | 210   |
- * | S5     | 85  | 36    | 100   |
- * | S6     | 60  | 15    | 50    |
+ * | Sampel | pH  | Metal |
+ * | ------ | --- | ----- |
+ * | S1     | 6.5 | 2     |
+ * | S2     | 5.8 | 3     |
+ * | S3     | 4.9 | 1     |
+ * | S4     | 7.0 | 12    |
+ * | S5     | 7.9 | 2     |
+ * | S6     | 6.8 | 1     |
  *
  * Fungsi yang wajib:
- *  - classifySample(aqi, pm25, ozone) → "Unsafe", "Caution", atau "Safe"
- *  - getCityDecision(unsafeCount) → pesan keputusan kota
+ *  - classifySample(ph, metal) → "Unsafe", "Caution", atau "Safe"
+ *  - getFarmDecision(unsafeCount) → pesan keputusan kebun
  *
  * Tugas:
  * 1. Buat kedua fungsi.
  * 2. Loop setiap sampel. Hitung Safe, Caution, dan Unsafe.
  *    Jangan pakai map, filter, atau reduce.
- * 3. Tampilkan hasil tiap sampel, ketiga jumlah, dan keputusan kota.
+ * 3. Tampilkan hasil tiap sampel, ketiga jumlah, dan keputusan kebun.
  *
  * Expected output:
  *  S1: Safe
@@ -43,12 +43,11 @@
  *  Safe: 2
  *  Caution: 2
  *  Unsafe: 2
- *  Stop outdoor activity
+ *  Stop planting
  */
 
 const sampleNames = ["S1", "S2", "S3", "S4", "S5", "S6"];
-const aqiValues = [72, 95, 160, 70, 85, 60];
-const pm25Values = [20, 40, 30, 20, 36, 15];
-const ozoneValues = [80, 90, 70, 210, 100, 50];
+const phValues = [6.5, 5.8, 4.9, 7.0, 7.9, 6.8];
+const metalValues = [2, 3, 1, 12, 2, 1];
 
 // Tulis solusi Anda di bawah ini.

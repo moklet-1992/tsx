@@ -1,16 +1,16 @@
 /**
- * Easy Case 05 — Klaim Garansi Ponsel
+ * Easy Case 05 — Klaim Asuransi Laptop
  * Points: 100 (Easy)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Service center menyetujui klaim garansi hanya jika SEMUA aturan berikut benar:
- *  - Usia perangkat maksimal 12 bulan
- *  - Nilai klaim lebih besar dari biaya servis
- *  - Jika klaim adalah kerusakan air, harus ada bukti waterproof
- *    (klaim non-air tidak wajib bukti waterproof)
+ * Asuransi menyetujui klaim laptop hanya jika SEMUA aturan berikut benar:
+ *  - Polis sudah aktif minimal 2 bulan
+ *  - Nilai klaim lebih besar dari biaya excess
+ *  - Jika laptop hilang, harus ada laporan polisi
+ *    (klaim perangkat rusak tidak wajib laporan polisi)
  *
  * Jika disetujui:
- *  - Pembayaran = nilai klaim - biaya servis
+ *  - Pembayaran = nilai klaim - biaya excess
  *  - Status = "Approved"
  *
  * Jika ditolak:
@@ -18,25 +18,25 @@
  *  - Status = "Rejected"
  *
  * Data klaim:
- * | Informasi            | Nilai        |
- * | -------------------- | ------------ |
- * | Nama Pelanggan       | Maya Kartika |
- * | Usia Perangkat (bln) | 8            |
- * | Nilai Klaim          | 1500000      |
- * | Biaya Servis         | 250000       |
- * | Kerusakan Air        | Ya           |
- * | Ada Bukti Waterproof | Ya           |
+ * | Informasi         | Nilai        |
+ * | ----------------- | ------------ |
+ * | Nama Pemilik      | Yoga Pratama |
+ * | Bulan Polis       | 6            |
+ * | Nilai Klaim       | 4500000      |
+ * | Biaya Excess      | 500000       |
+ * | Hilang            | Ya           |
+ * | Ada Laporan Polisi| Ya           |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
- * 2. Tulis aturan kerusakan air agar wajib hanya jika klaim adalah air.
- *    Petunjuk: !isWaterDamage || hasWaterproofProof
+ * 2. Tulis aturan barang hilang agar wajib hanya jika laptop hilang.
+ *    Petunjuk: !isLost || hasPoliceReport
  * 3. Gabungkan semua aturan persetujuan dengan operator logika.
- * 4. Hitung pembayaran dan tampilkan nama pelanggan, pembayaran, dan status.
+ * 4. Hitung pembayaran dan tampilkan nama pemilik, pembayaran, dan status.
  *
  * Expected output:
- *  Customer: Maya Kartika
- *  Payout: 1250000
+ *  Owner: Yoga Pratama
+ *  Payout: 4000000
  *  Status: Approved
  */
 

@@ -1,51 +1,50 @@
 /**
- * Easy Case 02 — Kartu Tamu Gerbang Kampus
+ * Easy Case 02 — Kuota Cetak Perpustakaan
  * Points: 100 (Easy)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Gerbang kampus harus memeriksa pengunjung dalam urutan ini dan berhenti
- * pada aturan pertama yang gagal:
- *  1. Jam kunjungan harus lebih dari 0
- *  2. Jam yang sudah dipakai hari ini + kunjungan ini tidak boleh melebihi
- *     batas jam harian
- *  3. Biaya kunjungan + biaya kendaraan tidak boleh melebihi kredit prabayar
+ * Printer perpustakaan harus memeriksa pekerjaan dalam urutan ini dan
+ * berhenti pada aturan pertama yang gagal:
+ *  1. Jumlah halaman harus lebih dari 0
+ *  2. Halaman yang sudah dicetak hari ini + pekerjaan ini tidak boleh
+ *     melebihi batas harian
+ *  3. Biaya cetak + biaya warna tidak boleh melebihi sisa kuota
  *
- * Biaya kendaraan:
- *  - Bawa mobil → Rp5.000
- *  - Tidak bawa mobil → Rp0
+ * Biaya warna:
+ *  - Cetak berwarna → Rp2.000
+ *  - Hitam putih → Rp0
  *
- * Biaya kunjungan = jam kunjungan × tarif per jam
+ * Biaya cetak = halaman × 200
  *
- * Jika kunjungan diterima:
- *  - Sisa kredit = kredit prabayar - biaya kunjungan - biaya kendaraan
+ * Jika diterima:
+ *  - Sisa kuota = kuota saat ini - biaya cetak - biaya warna
  *  - Status = "Success"
  *
- * Jika kunjungan ditolak:
- *  - Sisa kredit tetap sama dengan kredit prabayar
- *  - Status salah satu dari: "Invalid hours", "Daily hours exceeded",
- *    atau "Insufficient credit"
+ * Jika ditolak:
+ *  - Sisa kuota tetap sama
+ *  - Status salah satu dari: "Invalid pages", "Daily page limit exceeded",
+ *    atau "Insufficient quota"
  *
- * Data pengunjung:
- * | Informasi            | Nilai        |
- * | -------------------- | ------------ |
- * | Nama Pengunjung      | Doni Pratama |
- * | Kredit Prabayar      | 80000        |
- * | Jam Kunjungan        | 4            |
- * | Jam Terpakai Hari Ini| 3            |
- * | Batas Jam Harian     | 8            |
- * | Tarif per Jam        | 10000        |
- * | Bawa Mobil           | Ya           |
+ * Data pekerjaan:
+ * | Informasi              | Nilai      |
+ * | ---------------------- | ---------- |
+ * | Nama Mahasiswa         | Bima Sakti |
+ * | Sisa Kuota             | 25000      |
+ * | Halaman                | 40         |
+ * | Halaman Dicetak Hari Ini | 30       |
+ * | Batas Halaman Harian   | 80         |
+ * | Cetak Berwarna         | Ya         |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
- * 2. Tentukan biaya kendaraan dengan if...else.
- * 3. Validasi kunjungan sesuai urutan memakai if...else if...else.
- * 4. Tampilkan nama pengunjung, biaya kendaraan, sisa kredit, dan status.
+ * 2. Tentukan biaya warna dengan if...else.
+ * 3. Validasi pekerjaan sesuai urutan memakai if...else if...else.
+ * 4. Tampilkan nama mahasiswa, biaya warna, sisa kuota, dan status.
  *
  * Expected output:
- *  Visitor: Doni Pratama
- *  Vehicle fee: 5000
- *  Remaining credit: 35000
+ *  Student: Bima Sakti
+ *  Color fee: 2000
+ *  Remaining quota: 15000
  *  Status: Success
  */
 

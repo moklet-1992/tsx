@@ -1,44 +1,44 @@
 /**
- * High Case 04 — Language Course Report (Array methods)
+ * High Case 04 — Photo Studio Report (Array methods)
  * Points: 160 (High — Array methods)
  *
  * This case is about array methods only. Do not create a class.
- * Work directly on the session list with map, filter, reduce, and find.
+ * Work directly on the order list with map, filter, reduce, and find.
  *
- * Only completed sessions are billed.
- *  - Lesson fee = hours × 35000
- *  - Extra fee  = (extraMin - 15) × 400, only when extraMin > 15
- *  - Members receive 10% off lesson fee + extra fee
- *  - An incomplete session has fee 0
+ * Only completed orders are billed.
+ *  - Print fee = prints × 8000
+ *  - Rush fee  = (rushHours - 4) × 1500, only when rushHours > 4
+ *  - Members receive 15% off print fee + rush fee
+ *  - An incomplete order has fee 0
  *
  * Required array methods:
- *  - filter → completed sessions
+ *  - filter → completed orders
  *  - map    → invoices { id, fee }
- *  - reduce → total revenue of completed sessions
- *  - find   → the completed session with the most extraMin
+ *  - reduce → total revenue of completed orders
+ *  - find   → the completed order with the most rushHours
  *
  * Tasks:
- * 1. Write a function getFee(session) for the rules above.
+ * 1. Write a function getFee(order) for the rules above.
  * 2. Build the report with the array methods. Do not use a for loop.
- * 3. Display each completed invoice, member session ids, longest id,
+ * 3. Display each completed invoice, member order ids, longest id,
  *    and total revenue.
  *
  * Expected output:
- *  E1: 252000
- *  E2: 424000
- *  E4: 316800
- *  E5: 500000
- *  Member sessions: E1, E4
- *  Longest session: E5
- *  Total revenue: 1492800
+ *  P1: 68000
+ *  P2: 164500
+ *  P4: 104550
+ *  P5: 209000
+ *  Member orders: P1, P4
+ *  Longest order: P5
+ *  Total revenue: 546050
  */
 
-const sessions = [
-  { id: "E1", hours: 8, extraMin: 10, isMember: true, isCompleted: true },
-  { id: "E2", hours: 12, extraMin: 25, isMember: false, isCompleted: true },
-  { id: "E3", hours: 6, extraMin: 5, isMember: true, isCompleted: false },
-  { id: "E4", hours: 10, extraMin: 20, isMember: true, isCompleted: true },
-  { id: "E5", hours: 14, extraMin: 40, isMember: false, isCompleted: true },
+const orders = [
+  { id: "P1", prints: 10, rushHours: 3, isMember: true, isCompleted: true },
+  { id: "P2", prints: 20, rushHours: 7, isMember: false, isCompleted: true },
+  { id: "P3", prints: 8, rushHours: 2, isMember: true, isCompleted: false },
+  { id: "P4", prints: 15, rushHours: 6, isMember: true, isCompleted: true },
+  { id: "P5", prints: 25, rushHours: 10, isMember: false, isCompleted: true },
 ];
 
 // Write your solution below.

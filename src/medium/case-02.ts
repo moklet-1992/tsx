@@ -1,47 +1,45 @@
 /**
- * Medium Case 02 — Harbor Dock Shift
+ * Medium Case 02 — Stadium Gate Shift
  * Points: 140 (Medium)
  *
- * A harbor charges each vessel by type. This shift has a storm warning,
- * so a storm surcharge is added to the total after every vessel is counted.
+ * A stadium gate charges each ticket by type. This shift is rainy, so a
+ * rain surcharge is added to the total after every ticket is counted.
  *
- * Vessel types this shift:
- * ["ferry", "cargo", "ferry", "yacht", "speedboat", "cargo", "ferry", "cargo"]
+ * Ticket types this shift:
+ * ["regular", "vip", "regular", "student", "regular", "vip", "student", "regular"]
  *
  * Base fee:
- * | Type      | Fee   |
- * | --------- | ----- |
- * | speedboat | 4000  |
- * | ferry     | 12000 |
- * | yacht     | 20000 |
- * | cargo     | 25000 |
- * | any other | 0     |
+ * | Type    | Fee   |
+ * | ------- | ----- |
+ * | student | 15000 |
+ * | regular | 25000 |
+ * | vip     | 75000 |
+ * | any other | 0   |
  *
- * Storm surcharge = 20% of the total base fee.
- * Final collection = total base fee + storm surcharge.
+ * Rain surcharge = 10% of the total base fee.
+ * Final collection = total base fee + rain surcharge.
  *
  * Required functions:
- *  - getBaseFee(vesselType) → the fee for that type
- *  - getStormSurcharge(totalBaseFee, isStorm) → 20% when isStorm is true, else 0
+ *  - getBaseFee(ticketType) → the fee for that type
+ *  - getRainSurcharge(totalBaseFee, isRain) → 10% when isRain is true, else 0
  *
  * Tasks:
  * 1. Create both functions.
- * 2. Loop the vessels. Count each type and add up the base fees.
+ * 2. Loop the tickets. Count each type and add up the base fees.
  *    Do not use map, filter, or reduce.
- * 3. Apply the storm surcharge only because this is a storm shift.
+ * 3. Apply the rain surcharge only because this is a rain shift.
  * 4. Display every type count, total base fee, surcharge, and final collection.
  *
  * Expected output:
- *  Speedboat: 1
- *  Ferry: 3
- *  Yacht: 1
- *  Cargo: 3
- *  Total base fee: 135000
- *  Storm surcharge: 27000
- *  Final collection: 162000
+ *  Student: 2
+ *  Regular: 4
+ *  VIP: 2
+ *  Total base fee: 280000
+ *  Rain surcharge: 28000
+ *  Final collection: 308000
  */
 
-const vesselTypes = ["ferry", "cargo", "ferry", "yacht", "speedboat", "cargo", "ferry", "cargo"];
-const isStormShift = true;
+const ticketTypes = ["regular", "vip", "regular", "student", "regular", "vip", "student", "regular"];
+const isRainShift = true;
 
 // Write your solution below.

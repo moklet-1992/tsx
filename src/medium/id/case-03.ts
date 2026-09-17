@@ -1,54 +1,54 @@
 /**
- * Medium Case 03 — Pantau Rantai Dingin Vaksin
+ * Medium Case 03 — Pantau Kedaluwarsa Susu
  * Points: 140 (Medium)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Klinik memeriksa batch vaksin terhadap nomor hari hari ini (1–365).
- * Hari ini adalah hari ke-15.
+ * Toko kelontong memeriksa batch susu terhadap nomor hari hari ini (1–365).
+ * Hari ini adalah hari ke-40.
  *
  * | Nama Batch | Hari Kedaluwarsa |
  * | ---------- | ---------------- |
- * | FluA       | 10               |
- * | CovidB     | 17               |
- * | Tetanus    | 14               |
- * | HepB       | 40               |
- * | MMR        | 15               |
+ * | FreshA     | 35               |
+ * | YogurtB    | 42               |
+ * | CheeseC    | 39               |
+ * | ButterD    | 70               |
+ * | MilkE      | 40               |
  *
  * Sisa hari = hari kedaluwarsa - hari ini.
  *
  * Status (periksa dari atas ke bawah):
  *  - Sisa hari < 0  → "Expired"
- *  - Sisa hari <= 2 → "Warning"
+ *  - Sisa hari <= 3 → "Warning"
  *  - Selain itu     → "Safe"
  *
- * Jika minimal satu batch kedaluwarsa, status klinik "Cold chain hold".
- * Jika tidak, status klinik "Stock is clear".
+ * Jika minimal satu batch kedaluwarsa, status toko "Recall required".
+ * Jika tidak, status toko "Stock is clear".
  *
  * Fungsi yang wajib:
  *  - daysLeft(expiryDay, today) → hari kedaluwarsa dikurangi hari ini
  *  - getBatchStatus(days) → "Expired", "Warning", atau "Safe"
- *  - getClinicStatus(expiredCount) → pesan status klinik
+ *  - getStoreStatus(expiredCount) → pesan status toko
  *
  * Tugas:
  * 1. Buat ketiga fungsi.
  * 2. Loop setiap batch. Hitung Expired, Warning, dan Safe.
  *    Jangan pakai map, filter, atau reduce.
- * 3. Tampilkan nama batch beserta status, ketiga jumlah, dan status klinik.
+ * 3. Tampilkan nama batch beserta status, ketiga jumlah, dan status toko.
  *
  * Expected output:
- *  FluA: Expired
- *  CovidB: Warning
- *  Tetanus: Expired
- *  HepB: Safe
- *  MMR: Warning
+ *  FreshA: Expired
+ *  YogurtB: Warning
+ *  CheeseC: Expired
+ *  ButterD: Safe
+ *  MilkE: Warning
  *  Expired: 2
  *  Warning: 2
  *  Safe: 1
- *  Cold chain hold
+ *  Recall required
  */
 
-const batchNames = ["FluA", "CovidB", "Tetanus", "HepB", "MMR"];
-const expiryDays = [10, 17, 14, 40, 15];
-const today = 15;
+const batchNames = ["FreshA", "YogurtB", "CheeseC", "ButterD", "MilkE"];
+const expiryDays = [35, 42, 39, 70, 40];
+const today = 40;
 
 // Tulis solusi Anda di bawah ini.

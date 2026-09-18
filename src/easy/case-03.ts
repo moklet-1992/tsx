@@ -1,39 +1,39 @@
 /**
- * Easy Case 03 — Warehouse Incident Priority
+ * Easy Case 03 — Fire Station Call
  * Points: 100 (Easy)
  *
- * A warehouse assigns a priority and a response fee from an incident.
+ * A fire station assigns a code and a dispatch fee from a call.
  * Check the rules from top to bottom and use the first match.
  *
- * | Condition                                         | Priority | Fee    |
- * | ------------------------------------------------- | -------- | ------ |
- * | Fire alarm is on, OR there is a chemical leak     | Hazard   | 250000 |
- * | Injury count is at least 1, OR a machine stopped  | Urgent   | 150000 |
- * | Any other case                                    | Routine  | 50000  |
+ * | Condition                                          | Code        | Fee    |
+ * | -------------------------------------------------- | ----------- | ------ |
+ * | Building fire is true, OR there is a gas leak      | Code Red    | 300000 |
+ * | Injury count is at least 1, OR someone is trapped  | Code Yellow | 180000 |
+ * | Any other case                                     | Code Green  | 70000  |
  *
- * Incident information:
- * | Information    | Value       |
- * | -------------- | ----------- |
- * | Reporter Name  | Eko Santoso |
- * | Fire Alarm     | No          |
- * | Chemical Leak  | No          |
- * | Injury Count   | 1           |
- * | Machine Stopped| No          |
+ * Call information:
+ * | Information    | Value         |
+ * | -------------- | ------------- |
+ * | Caller Name    | Haris Nugroho |
+ * | Building Fire  | No            |
+ * | Gas Leak       | No            |
+ * | Injury Count   | 0             |
+ * | Person Trapped | Yes           |
  *
  * Tasks:
  * 1. Declare all required variables using the most appropriate data types.
- * 2. Decide the priority using if...else if...else and logical operators.
- * 3. Set the response fee from the matched priority.
- * 4. Display the reporter name, priority, fee, and a short reason:
- *    - Hazard  → "Clear the area now"
- *    - Urgent  → "Dispatch supervisor"
- *    - Routine → "Log for morning review"
+ * 2. Decide the code using if...else if...else and logical operators.
+ * 3. Set the dispatch fee from the matched code.
+ * 4. Display the caller name, code, fee, and a short reason:
+ *    - Code Red    → "Send full crew"
+ *    - Code Yellow → "Send rescue team"
+ *    - Code Green  → "Stand by at station"
  *
  * Expected output:
- *  Reporter: Eko Santoso
- *  Priority: Urgent
- *  Fee: 150000
- *  Dispatch supervisor
+ *  Caller: Haris Nugroho
+ *  Code: Code Yellow
+ *  Fee: 180000
+ *  Send rescue team
  */
 
 // Write your solution below.

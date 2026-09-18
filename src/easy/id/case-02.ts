@@ -1,50 +1,50 @@
 /**
- * Easy Case 02 — Kuota Cetak Perpustakaan
+ * Easy Case 02 — Kartu Makan Kantin
  * Points: 100 (Easy)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Printer perpustakaan harus memeriksa pekerjaan dalam urutan ini dan
- * berhenti pada aturan pertama yang gagal:
- *  1. Jumlah halaman harus lebih dari 0
- *  2. Halaman yang sudah dicetak hari ini + pekerjaan ini tidak boleh
- *     melebihi batas harian
- *  3. Biaya cetak + biaya warna tidak boleh melebihi sisa kuota
+ * Kasir kantin harus memeriksa pembelian dalam urutan ini dan berhenti
+ * pada aturan pertama yang gagal:
+ *  1. Jumlah paket makan harus lebih dari 0
+ *  2. Paket yang sudah dibeli hari ini + pesanan ini tidak boleh melebihi
+ *     batas harian
+ *  3. Biaya makan + biaya minuman tidak boleh melebihi saldo kartu
  *
- * Biaya warna:
- *  - Cetak berwarna → Rp2.000
- *  - Hitam putih → Rp0
+ * Biaya minuman:
+ *  - Ada minuman → Rp4.000
+ *  - Tanpa minuman → Rp0
  *
- * Biaya cetak = halaman × 200
+ * Biaya makan = jumlah paket × 12000
  *
- * Jika diterima:
- *  - Sisa kuota = kuota saat ini - biaya cetak - biaya warna
+ * Jika pembelian diterima:
+ *  - Saldo baru = saldo kartu - biaya makan - biaya minuman
  *  - Status = "Success"
  *
- * Jika ditolak:
- *  - Sisa kuota tetap sama
- *  - Status salah satu dari: "Invalid pages", "Daily page limit exceeded",
- *    atau "Insufficient quota"
+ * Jika pembelian ditolak:
+ *  - Saldo baru tetap sama dengan saldo kartu
+ *  - Status salah satu dari: "Invalid meals", "Daily meal limit exceeded",
+ *    atau "Insufficient balance"
  *
- * Data pekerjaan:
- * | Informasi              | Nilai      |
- * | ---------------------- | ---------- |
- * | Nama Mahasiswa         | Bima Sakti |
- * | Sisa Kuota             | 25000      |
- * | Halaman                | 40         |
- * | Halaman Dicetak Hari Ini | 30       |
- * | Batas Halaman Harian   | 80         |
- * | Cetak Berwarna         | Ya         |
+ * Data pembelian:
+ * | Informasi              | Nilai         |
+ * | ---------------------- | ------------- |
+ * | Nama Mahasiswa         | Putri Lestari |
+ * | Saldo Kartu            | 60000         |
+ * | Paket Makan            | 3             |
+ * | Paket Dibeli Hari Ini  | 2             |
+ * | Batas Paket Harian     | 6             |
+ * | Ada Minuman            | Ya            |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
- * 2. Tentukan biaya warna dengan if...else.
- * 3. Validasi pekerjaan sesuai urutan memakai if...else if...else.
- * 4. Tampilkan nama mahasiswa, biaya warna, sisa kuota, dan status.
+ * 2. Tentukan biaya minuman dengan if...else.
+ * 3. Validasi pembelian sesuai urutan memakai if...else if...else.
+ * 4. Tampilkan nama mahasiswa, biaya minuman, saldo baru, dan status.
  *
  * Expected output:
- *  Student: Bima Sakti
- *  Color fee: 2000
- *  Remaining quota: 15000
+ *  Student: Putri Lestari
+ *  Drink fee: 4000
+ *  New balance: 20000
  *  Status: Success
  */
 

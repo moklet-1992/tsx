@@ -77,12 +77,12 @@ Six case studies. Each one combines **data types**, **operators**, and **conditi
 
 | File | Case | Skills | Points |
 |------|------|--------|--------|
-| `src/easy/case-01.ts` | Lab Internship Screening | many `&&` rules + nested track | 100 |
-| `src/easy/case-02.ts` | Library Print Quota | ordered validation + color fee | 100 |
-| `src/easy/case-03.ts` | Warehouse Incident Priority | first-match `||` bands + fee | 100 |
-| `src/easy/case-04.ts` | Event Catering Quote | capacity gate + several fee parts | 100 |
-| `src/easy/case-05.ts` | Laptop Insurance Claim | conditional lost-item rule + payout | 100 |
-| `src/easy/case-06.ts` | Side-Hustle Loan Pre-Check | ratio formulas + combined screening | 100 |
+| `src/easy/case-01.ts` | Mountain Hiking Permit | many `&&` rules + nested route | 100 |
+| `src/easy/case-02.ts` | Canteen Meal Card | ordered validation + drink fee | 100 |
+| `src/easy/case-03.ts` | Fire Station Call | first-match `||` bands + fee | 100 |
+| `src/easy/case-04.ts` | Laundry Pickup Quote | capacity gate + several fee parts | 100 |
+| `src/easy/case-05.ts` | Camera Rental Damage Claim | conditional stolen-item rule + payout | 100 |
+| `src/easy/case-06.ts` | Scholarship Stipend Pre-Check | ratio formulas + combined screening | 100 |
 
 Mark each Easy case out of **100**: data types 30, operators/formulas 30, conditions 30, expected output 10. Easy level cap: **250**.
 

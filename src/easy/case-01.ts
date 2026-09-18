@@ -1,45 +1,46 @@
 /**
- * Easy Case 01 — Lab Internship Screening
+ * Easy Case 01 — Mountain Hiking Permit
  * Points: 100 (Easy)
  *
- * A campus lab accepts an intern only when ALL of these rules are true:
- *  - GPA is at least 3.0
- *  - Credits completed are at least 80
- *  - English score is at least 70
- *  - Remaining internship months are at least 2
- *  - The advisor has approved
+ * A ranger station issues a hiking permit only when ALL of these rules
+ * are true:
+ *  - Age is from 15 to 60 (inclusive)
+ *  - Training hikes completed are at least 3
+ *  - Oxygen saturation is at least 94
+ *  - Days since the last hike is at least 2
+ *  - The hiker has medical clearance
  *
- * If the intern is eligible, choose the track:
- *  - GPA is 3.5 or more → "Research Track"
- *  - Otherwise → "Industry Track"
+ * If the hiker is eligible, choose the route:
+ *  - Training hikes are 6 or more → "Summit Route"
+ *  - Otherwise → "Base Route"
  *
- * If the intern is not eligible:
- *  - Track is "None"
+ * If the hiker is not eligible:
+ *  - Route is "None"
  *
- * Intern information:
- * | Information             | Value     |
- * | ----------------------- | --------- |
- * | Intern Name             | Nia Putri |
- * | GPA                     | 3.4       |
- * | Credits                 | 92        |
- * | English Score           | 78        |
- * | Remaining Months        | 4         |
- * | Advisor Approved        | Yes       |
+ * Hiker information:
+ * | Information          | Value        |
+ * | -------------------- | ------------ |
+ * | Hiker Name           | Arga Wijaya  |
+ * | Age                  | 31           |
+ * | Training Hikes       | 4            |
+ * | Oxygen Saturation    | 96           |
+ * | Days Since Last Hike | 5            |
+ * | Medical Clearance    | Yes          |
  *
  * Tasks:
  * 1. Declare all required variables using the most appropriate data types.
  * 2. Combine every eligibility rule with logical operators.
- * 3. If eligible, decide the track with a nested if...else.
- * 4. Display the intern name, eligibility (true/false), track, and
+ * 3. If eligible, decide the route with a nested if...else.
+ * 4. Display the hiker name, eligibility (true/false), route, and
  *    one of these messages:
- *    - "Eligible for internship"
- *    - "Not eligible for internship"
+ *    - "Permit approved"
+ *    - "Permit denied"
  *
  * Expected output:
- *  Intern: Nia Putri
+ *  Hiker: Arga Wijaya
  *  Eligible: true
- *  Track: Industry Track
- *  Eligible for internship
+ *  Route: Base Route
+ *  Permit approved
  */
 
 // Write your solution below.

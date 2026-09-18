@@ -1,49 +1,49 @@
 /**
- * Easy Case 04 — Penawaran Katering Acara
+ * Easy Case 04 — Penawaran Antar Laundry
  * Points: 100 (Easy)
  * Versi Bahasa Indonesia. Expected output sama dengan versi Inggris.
  *
- * Dapur katering memeriksa kapasitas dulu, lalu menghitung biaya dari
- * beberapa bagian.
+ * Layanan laundry memeriksa kapasitas berat dulu, lalu menghitung biaya
+ * dari beberapa bagian.
  *
  * Kapasitas:
- *  - Jumlah tamu lebih dari 80 → status "Out of capacity" dan total biaya 0
+ *  - Berat lebih dari 15 kg → status "Out of service" dan total biaya 0
  *  - Selain itu → status "Accepted" dan hitung biaya di bawah
  *
  * Bagian biaya jika diterima:
- *  - Biaya dasar = 50000
- *  - Biaya tamu = jumlah tamu × 35000
- *  - Biaya dessert = 15000 jika ada dessert, selain itu 0
- *  - Biaya vegetarian = 20000 jika menu vegetarian, selain itu 0
- *  - Biaya weekend = 40000 jika acara di akhir pekan, selain itu 0
- *  - Biaya antar = 25000 jika minta diantar, selain itu 0
+ *  - Biaya dasar = 8000
+ *  - Biaya berat = berat × 6000
+ *  - Biaya kilat = 12000 jika minta kilat, selain itu 0
+ *  - Biaya setrika = 7000 jika minta setrika, selain itu 0
+ *  - Biaya pewangi = 3000 jika minta pewangi, selain itu 0
+ *  - Biaya weekend = 5000 jika jemput di akhir pekan, selain itu 0
  *  - Total biaya = semua bagian dijumlahkan
  *
- * Data acara:
- * | Informasi         | Nilai          |
- * | ----------------- | -------------- |
- * | Nama Klien        | Lila Anggraini |
- * | Jumlah Tamu       | 24             |
- * | Ada Dessert       | Ya             |
- * | Menu Vegetarian   | Ya             |
- * | Akhir Pekan       | Ya             |
- * | Minta Diantar     | Tidak          |
+ * Data pesanan:
+ * | Informasi       | Nilai         |
+ * | --------------- | ------------- |
+ * | Nama Pelanggan  | Dina Maharani |
+ * | Berat (kg)      | 8             |
+ * | Kilat           | Ya            |
+ * | Setrika         | Ya            |
+ * | Pewangi         | Tidak         |
+ * | Akhir Pekan     | Ya            |
  *
  * Tugas:
  * 1. Deklarasikan semua variabel dengan tipe data yang paling sesuai.
- * 2. Tolak acara jika di luar kapasitas.
+ * 2. Tolak pesanan jika di luar layanan.
  * 3. Jika diterima, hitung setiap bagian biaya, lalu totalnya.
- * 4. Tampilkan nama klien, setiap bagian biaya, total, dan status.
+ * 4. Tampilkan nama pelanggan, setiap bagian biaya, total, dan status.
  *
  * Expected output:
- *  Client: Lila Anggraini
- *  Base fee: 50000
- *  Guest fee: 840000
- *  Dessert fee: 15000
- *  Vegetarian fee: 20000
- *  Weekend fee: 40000
- *  Delivery fee: 0
- *  Total fee: 965000
+ *  Customer: Dina Maharani
+ *  Base fee: 8000
+ *  Weight fee: 48000
+ *  Express fee: 12000
+ *  Ironing fee: 7000
+ *  Fragrance fee: 0
+ *  Weekend fee: 5000
+ *  Total fee: 80000
  *  Status: Accepted
  */
 
